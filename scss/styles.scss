@@ -1,0 +1,68 @@
+$defaultColor: #a9a9a9;
+$goColor: #00ff00;
+$slowColor: #ffad00;
+$highLightBorder: #ffff00;
+$stopColor: #ff0000;
+$fontColor: #ffffff;
+$blackTransparent: rgba(0, 0, 0, 0);
+$black: rgba(0, 0, 0, 1);
+$shadowColor: rgba(0, 0, 0, 0.5);
+
+#container {
+  background-color: $defaultColor;
+  width: 300px;
+  margin: 50px auto;
+  border: 5px solid $black;
+  box-shadow: 0 5px 5px $shadowColor;
+}
+
+.trafficLight {
+  padding: 10px 20px;
+  border-radius: 50%;
+  border: 2px solid $black;
+  cursor: pointer;
+  background-color: $defaultColor;
+  color: $fontColor;
+  margin: 10px auto;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    $blackTransparent 0%,
+    $shadowColor 78%,
+    $black 100%
+  );
+
+  &:hover {
+    border-color: $highLightBorder;
+    box-shadow: 0 5px 5px $shadowColor;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &--stop {
+    @extend .trafficLight;
+    background-color: $stopColor;
+    &:active {
+      background: darken($stopColor, 20%);
+    }
+  }
+
+  &--slow {
+    @extend .trafficLight;
+    background-color: $slowColor;
+    &:active {
+      background-color: darken($slowColor, 20%);
+    }
+  }
+
+  &--go {
+    @extend .trafficLight;
+    background-color: $goColor;
+    &:active {
+      background-color: darken($goColor, 20%);
+    }
+  }
+}

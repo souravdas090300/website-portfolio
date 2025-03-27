@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="icon" type="favicon.png" href="img/favicon.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.production.css" />
+  </head>
+
+  <body>
+    <header class="page-header">
+      <!-- Add Logo here -->
+      <img
+        src="img/Das.png"
+        alt="logo"
+        id="header-img"
+        class="page-header__item"
+      />
+      <nav class="main-navigation page-header__item">
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a href="index.html" role="menuitem" class="navigation-list__item"
+              >Home</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="about.html" role="menuitem" class="navigation-list__item"
+              >About</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="work.html"
+              role="menuitem"
+              class="navigation-list__item navigation-list__item--active"
+              >Work</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="contact.html" role="menuitem" class="navigation-list__item"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+        Sourav portfolio <br />
+        Danny cermona street <br />
+        33 Marthese house <br />
+        Hamrun, Malta <br />
+        HMR 1513 <br />
+        Malta <br />
+        <br />
+        Tel <a href="tel:+356 779 550 97"> +356 779 550 97</a> <br />
+        Skype
+        <a href="skype:live:.cid.e24e5fd86bb953fb">
+          live:.cid.e24e5fd86bb953fb</a
+        >
+        <br />
+        <a href="mailto:souravdas090300@gmail.com"> souravdas090300@gmail.com</a
+        ><br />
+      </div>
+      <section id="contact-form">
+        <h2>Get in Touch</h2>
+        <form action="submit_form.php" method="post">
+          <label class="standard-label" for="mobile">Mobile number: </label>
+          <input
+            type="mobile"
+            id="mobile"
+            placholder="00356 123 456 78"
+            name="mobile"
+            required
+          /><br />
+
+          <label class="standard-label" for="email">Email: </label>
+          <input
+            type="email"
+            id="email"
+            placeholder="example@gmail.com"
+            name="email"
+            required
+          /><br />
+
+          <label class="standard-label" for="message">Message:</label>
+          <textarea
+            id="message"
+            placeholder="Type here"
+            name="message"
+            required
+          ></textarea
+          ><br />
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <h1>Find me on</h1>
+      <img src="img/github.svg" width="30" height="30" alt="Github" />
+      <img src="img/linkdin.svg" width="30" height="30" alt="Linkdin" />
+      <img src="img/twitter.svg" width="30" height="30" alt="Twitter" />
+
+      <div>
+        <a href="home">Go To Home</a>
+        <a href="about">Back To About</a>
+      </div>
+    </footer>
+
+    <script src="js/tota11y.min.js"></script>
+  </body>
+</html>
