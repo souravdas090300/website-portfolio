@@ -10,12 +10,16 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: #00008b;
-  background-color: #ffffff;
+  background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 h1 {
   font-weight: 400;
-  color: #ffffff;
+  color: #fff;
 }
 
 h2 {
@@ -27,7 +31,7 @@ h2 {
 p {
   font-size: 16px;
   font-weight: 400;
-  color: #000000;
+  color: #000;
 }
 
 a {
@@ -41,8 +45,8 @@ footer h1 {
 button {
   font-size: 36px;
   font-weight: 400;
-  background-color: #3366ff;
-  color: #ffffff;
+  background-color: #36f;
+  color: #fff;
   border: 2px solid #33ff36;
   padding: 10px 20px;
 }
@@ -53,7 +57,7 @@ button:hover {
 }
 
 button:active {
-  background-color: #00cc99;
+  background-color: #0c9;
 }
 
 button:focus {
@@ -63,11 +67,11 @@ button:focus {
 header {
   font-size: 16px;
   font-weight: 400;
-  color: #ffffff;
-  background-color: #cccccc;
+  color: #fff;
+  background-color: #ccc;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border: 5px solid #000000;
+  border: 5px solid #000;
   text-align: center;
   margin: 20px auto 10px;
   padding: 20px;
@@ -138,7 +142,7 @@ main {
 }
 
 #index-contact-form > h1 {
-  color: #000000;
+  color: #000;
 }
 
 * {
@@ -158,7 +162,7 @@ form > * {
 }
 
 #grid__container {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 @media all and (max-width: 500px) {
@@ -180,7 +184,9 @@ form > * {
 
 #grid__container > *:nth-child(1) {
   -ms-grid-row: 1;
+  grid-row: 1;
   -ms-grid-column: 1;
+  grid-column: 1;
 }
 
 #grid__container > *:nth-child(2) {
@@ -288,13 +294,12 @@ form > * {
 }
 
 .animated-button {
-  border: none;
   display: inline-block;
   font-family: "Roboto", sans-serif;
   font-size: 36px;
   font-weight: 400;
   background-color: #33ff36;
-  color: #ffffff;
+  color: #fff;
   border: 2px solid #ff00bf;
   padding: 10px 20px;
   -webkit-transition-duration: 500ms;
@@ -303,8 +308,6 @@ form > * {
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   -o-transition-property: transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
   -webkit-transition-timing-function: ease;
   -o-transition-timing-function: ease;
   transition-timing-function: ease;
@@ -340,9 +343,11 @@ form > * {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -352,9 +357,11 @@ form > * {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -378,6 +385,7 @@ form > * {
     -webkit-transform: translate(0, 50px);
     transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
     transform: translate(200px, 50px);
@@ -389,6 +397,7 @@ form > * {
     -webkit-transform: translate(0, 50px);
     transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
     transform: translate(200px, 50px);
@@ -418,6 +427,7 @@ form > * {
     -webkit-transform: translate(446px, 48px);
     transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
     transform: translate(100px, 48px);
@@ -429,6 +439,7 @@ form > * {
     -webkit-transform: translate(446px, 48px);
     transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
     transform: translate(100px, 48px);
@@ -455,7 +466,7 @@ p {
   margin-bottom: 20px;
 }
 
-#about-main:ul {
+#about-main ul {
   list-style-type: disc;
   margin: 20px;
   padding: 0;

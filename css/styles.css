@@ -3,14 +3,14 @@
   --font-size-base: 16px;
   --font-weight-base: 400;
   --color-dark-blue: #00008b;
-  --color-white: #ffffff;
+  --color-white: #fff;
   --color-dark-grey: #2b2b2b;
   --color-primary: #357b70;
   --color-secondary: #e0b354;
-  --color-black: #000000;
-  --color-button-bg: #3366ff;
+  --color-black: #000;
+  --color-button-bg: #36f;
   --color-button-hover: #b100cd;
-  --color-button-active: #00cc99;
+  --color-button-active: #0c9;
   --color-button-focus: #ff00bf;
   --color-grid-item-bg: #bff4be;
   --color-table-header-bg: #f4f4f4;
@@ -22,8 +22,8 @@
   --border-radius-circle: 50%;
   --grid-gap: 10px;
   --grid-gap-responsive: 20px;
-  --header-bg: #cccccc;
-  --header-border: 5px solid #000000;
+  --header-bg: #ccc;
+  --header-border: 5px solid #000;
   --footer-padding: 20px;
 }
 
@@ -250,7 +250,6 @@ form > * {
 }
 
 .animated-button {
-  border: none;
   display: inline-block;
   font-family: var(--font-family);
   font-size: 36px;
@@ -283,9 +282,11 @@ form > * {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -303,6 +304,7 @@ form > * {
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
@@ -324,6 +326,7 @@ form > * {
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
@@ -348,7 +351,7 @@ p {
   margin-bottom: 20px;
 }
 
-#about-main:ul {
+#about-main ul {
   list-style-type: disc;
   margin: 20px;
   padding: 0;
