@@ -150,6 +150,11 @@ main {
   color: var(--color-black);
 }
 
+#contact-main-div {
+  font-size: 18px;
+  padding: auto;
+}
+
 * {
   box-sizing: border-box;
 }
