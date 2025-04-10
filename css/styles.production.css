@@ -145,9 +145,29 @@ main {
   color: #000;
 }
 
-#contact-main-div {
-  font-size: 24px;
-  padding: 20px;
+#about-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.contact-main-div {
+  font-size: 16px;
+  padding: 15px;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 * {
