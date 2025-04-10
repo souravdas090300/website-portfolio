@@ -145,6 +145,11 @@ main {
   color: #000;
 }
 
+#contact-main-div {
+  font-size: 18px;
+  padding: 10px;
+}
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
