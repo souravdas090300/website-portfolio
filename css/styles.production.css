@@ -149,7 +149,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -161,13 +161,13 @@ main {
   margin: 0 auto;
 }
 
-.contact-main-div {
-  font-size: 16px;
-  padding: 15px;
-  color: #333;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+#contact-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  padding: 10px;
+  margin: 0 auto;
 }
 
 * {
