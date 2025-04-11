@@ -155,10 +155,8 @@ main {
 .div {
   font-size: 24px;
   padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: auto;
+  text-align: center;
 }
 
 * {
