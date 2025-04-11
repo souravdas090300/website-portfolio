@@ -4,7 +4,7 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
-
+/* No errors found in the provided CSS. Ensure the placeholder is replaced with valid CSS code or comments. */
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -147,27 +147,17 @@ main {
 
 #about-main {
   text-align: center;
-  font-size: 24px;
-  font-weight: 400;
   align-items: center;
   padding: 10px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 #contact-main-div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
   font-size: 24px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: auto;
 }
 
