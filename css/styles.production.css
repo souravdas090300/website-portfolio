@@ -147,20 +147,18 @@ main {
 
 #about-main {
   text-align: center;
-  font-size: 24px;
-  font-weight: 400;
   align-items: center;
   padding: 10px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-#contact-main {
+#contact-main-div {
   text-align: center;
   font-size: 24px;
   font-weight: 400;
   align-items: center;
   padding: 10px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 * {
