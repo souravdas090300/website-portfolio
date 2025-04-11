@@ -153,12 +153,17 @@ main {
 }
 
 #contact-main-div {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   align-items: center;
-  padding: 10px;
-  margin: auto;
+  justify-content: center;
+  padding: 20px;
+  font-size: 24px;
 }
 
 * {
