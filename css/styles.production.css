@@ -146,33 +146,18 @@ main {
 }
 
 #about-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   text-align: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  font-size: 24px;
+  font-weight: 400;
   align-items: center;
   padding: 10px;
   margin: 0 auto;
 }
 
 #contact-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   text-align: center;
   font-size: 24px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  font-weight: 400;
   align-items: center;
   padding: 10px;
   margin: 0 auto;
