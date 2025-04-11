@@ -153,10 +153,12 @@ main {
 }
 
 #contact-main-div {
+  font-size: 24px;
+  padding: 10px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  font-size: 24px;
+  margin: auto;
 }
 
 * {
