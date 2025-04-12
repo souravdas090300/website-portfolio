@@ -204,6 +204,12 @@ form > * {
     grid-gap: 15px;
   }
 
+  @media all and (max-width: 767px) {
+    body {
+      padding: 0 10px;
+    }
+  }
+
   #grid__container > * {
     grid-column: 1;
     grid-row: auto;
