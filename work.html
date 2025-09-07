@@ -2,7 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" con        <div class="grid__item">
+          <h2>Meet App - Enterprise PWA</h2>
+          <p>
+            A production-ready React Progressive Web Application with Google Calendar integration, 
+            OAuth authentication, AWS Lambda serverless backend, and comprehensive data visualization. 
+            Features include offline support, real-time data charts, and comprehensive testing.
+          </p>
+          <a href="https://github.com/souravdas090300/meet" target="_blank">View on GitHub</a>
+          <a href="https://souravdas090300.github.io/meet/" target="_blank">Live Demo</a>
+        </div>th=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <link
       rel="stylesheet"
@@ -16,6 +25,48 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.production.css" />
+    <style>
+      .grid__item a {
+        display: inline-block;
+        margin: 8px 10px 8px 0;
+        padding: 10px 20px;
+        background-color: #357b70;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
+
+      .grid__item a:hover {
+        background-color: #2b6259;
+        text-decoration: none;
+      }
+
+      .grid__item a:first-of-type {
+        background-color: #2b2b2b;
+      }
+
+      .grid__item a:first-of-type:hover {
+        background-color: #1a1a1a;
+      }
+
+      .grid__item {
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .grid__item h2 {
+        color: #2b2b2b;
+        margin-bottom: 15px;
+      }
+
+      .grid__item p {
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+    </style>
     <title>My Work</title>
   </head>
 
@@ -58,7 +109,7 @@
     </header>
 
     <main>
-      <h1>Work</h1>
+      <h1>My Projects</h1>
       <div id="grid__container">
         <div class="grid__item">
           <h2>Mobile web app</h2>
@@ -70,43 +121,82 @@
           <a href="#">See project on GitHub</a>
         </div>
         <div class="grid__item">
-          <h2>Native MacOS application</h2>
+          <h2>myFlix React Client</h2>
           <p>
-            With this project, I was responsible for the front-end. It's written
-            in JavaFX.
+            A modern React-based single-page application for browsing and
+            managing favorite movies. Features user authentication, advanced
+            search functionality, responsive design, and seamless API
+            integration with comprehensive movie database.
           </p>
-          <a href="#">See project on GitHub</a>
+          <a
+            href="https://github.com/souravdas090300/myFlix-client"
+            target="_blank"
+            >View on GitHub</a
+          >
+          <a href="https://my-flix-clients.netlify.app/" target="_blank"
+            >Live Demo</a
+          >
         </div>
         <div class="grid__item">
-          <h2>Node.js PDF generation</h2>
+          <h2>myFlix Angular Client</h2>
           <p>
-            With this project, I created a service that generated PDFs out of
-            webpages with the help of a Node.js server.
+            Angular-based movie discovery application built with TypeScript.
+            Demonstrates proficiency in Angular framework, component
+            architecture, and modern frontend development practices with
+            comprehensive documentation.
           </p>
-          <a href="#">See project on GitHub</a>
+          <a
+            href="https://github.com/souravdas090300/myFlix-Angular-client"
+            target="_blank"
+            >View on GitHub</a
+          >
         </div>
         <div class="grid__item">
-          <h2>Styleguide for portfolio page</h2>
+          <h2>MovieFlix API Backend</h2>
           <p>
-            Here you can find the style guide I've created for my portfolio
-            page.
+            RESTful Node.js API backend for movie applications. Built with
+            Express.js, MongoDB, and comprehensive authentication system.
+            Supports user management, movie data operations, and secure
+            JWT-based authentication.
           </p>
-          <a href="#">See Styleguide</a>
+          <a
+            href="https://github.com/souravdas090300/movieFlix_api"
+            target="_blank"
+            >View on GitHub</a
+          >
         </div>
         <div class="grid__item">
-          <h2>Medium blog</h2>
-          <p>I am also writing Medium blog posts.</p>
-          <a href="#">Read my latest blog post</a>
+          <h2>To-Do List Application</h2>
+          <p>
+            Interactive task management application built with vanilla
+            JavaScript, HTML, and CSS. Features include adding, editing,
+            deleting tasks, local storage persistence, and responsive design for
+            optimal user experience.
+          </p>
+          <a
+            href="https://github.com/souravdas090300/to-do-list-app"
+            target="_blank"
+            >View on GitHub</a
+          >
         </div>
         <div class="grid__item">
-          <h2>My project</h2>
+          <h2>Portfolio Website</h2>
           <p>
-            I can help in realizing front-end and back-end projects with the
-            following technologies: HTML, CSS, JavaScript, Java, JavaFX,
-            React.js, Node.js, and Python. I am also happy to learn other
-            technologies if needed.
+            Personal portfolio website showcasing my skills and projects. Built
+            with semantic HTML5, CSS3, and responsive design principles.
+            Features clean design, accessibility compliance, and optimized
+            performance.
           </p>
-          <a href="#">Contact me</a>
+          <a
+            href="https://github.com/souravdas090300/website-portfolio"
+            target="_blank"
+            >View on GitHub</a
+          >
+          <a
+            href="https://souravdas090300.github.io/website-portfolio/"
+            target="_blank"
+            >Live Demo</a
+          >
         </div>
       </div>
     </main>
@@ -114,13 +204,22 @@
     <footer class="page-footer">
       <h1>Find me on</h1>
 
-      <img src="img/github.svg" width="30" height="30" alt="Github" />
-      <img src="img/linkdin.svg" width="30" height="30" alt="Linkdin" />
-      <img src="img/twitter.svg" width="30" height="30" alt="Twitter" />
+      <a href="https://github.com/souravdas090300" target="_blank">
+        <img src="img/github.svg" width="30" height="30" alt="Github" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/sourav-das-150b89355"
+        target="_blank"
+      >
+        <img src="img/linkdin.svg" width="30" height="30" alt="LinkedIn" />
+      </a>
+      <a href="https://twitter.com/souravdas090300" target="_blank">
+        <img src="img/twitter.svg" width="30" height="30" alt="Twitter" />
+      </a>
 
       <div>
-        <a href="home">Go To Home</a>
-        <a href="about">Back To About</a>
+        <a href="index.html">Go To Home</a>
+        <a href="about.html">About Me</a>
       </div>
     </footer>
 
