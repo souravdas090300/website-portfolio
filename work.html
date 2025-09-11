@@ -14,204 +14,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="css/styles.production.css" />
-    <style>
-      /* Grid container styling for responsive layout */
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 25px;
-        padding: 20px 0;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      /* Responsive adjustments for smaller screens */
-      @media (max-width: 992px) {
-        .grid {
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 20px;
-          padding: 20px 15px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .grid {
-          grid-template-columns: 1fr !important;
-          gap: 20px;
-          padding: 15px 10px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .grid {
-          grid-template-columns: 1fr !important;
-          gap: 15px;
-          padding: 10px 5px;
-        }
-      }
-
-      /* Extra small mobile devices */
-      @media (max-width: 360px) {
-        .grid {
-          grid-template-columns: 1fr !important;
-          gap: 12px;
-          padding: 8px 3px;
-        }
-      }
-
-      .grid__item a {
-        display: inline-block;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        padding: 10px 20px;
-        background-color: #357b70;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
-      }
-
-      .grid__item a:hover {
-        background-color: #2b6259;
-        text-decoration: none;
-      }
-
-      .grid__item a:first-of-type {
-        background-color: #2b2b2b;
-      }
-
-      .grid__item a:first-of-type:hover {
-        background-color: #1a1a1a;
-      }
-
-      .grid__item {
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        background-color: #ffffff;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        height: fit-content;
-      }
-
-      .grid__item:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-      }
-
-      .grid__item h2 {
-        color: #2b2b2b;
-        margin-bottom: 15px;
-        font-size: 1.2em;
-        line-height: 1.3;
-      }
-
-      .grid__item p {
-        line-height: 1.6;
-        margin-bottom: 20px;
-        color: #555;
-        font-size: 0.95em;
-      }
-
-      /* Section styling */
-      section {
-        padding: 40px 20px;
-      }
-
-      section h1 {
-        text-align: center;
-        margin-bottom: 40px;
-        color: #357b70;
-        font-size: 2.5em;
-      }
-
-      /* Mobile-specific styling for grid items */
-      @media (max-width: 768px) {
-        .grid__item {
-          padding: 18px;
-          margin-bottom: 0;
-        }
-
-        .grid__item h2 {
-          font-size: 1.1em;
-        }
-
-        .grid__item p {
-          font-size: 0.9em;
-          line-height: 1.5;
-        }
-
-        .grid__item a {
-          padding: 8px 16px;
-          font-size: 0.9em;
-          margin-right: 8px;
-          margin-bottom: 8px;
-        }
-
-        section {
-          padding: 30px 15px;
-        }
-
-        section h1 {
-          font-size: 2em;
-          margin-bottom: 30px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .grid__item {
-          padding: 15px;
-        }
-
-        .grid__item h2 {
-          font-size: 1em;
-          margin-bottom: 12px;
-        }
-
-        .grid__item p {
-          font-size: 0.85em;
-          margin-bottom: 15px;
-        }
-
-        .grid__item a {
-          padding: 8px 14px;
-          font-size: 0.85em;
-          display: block;
-          text-align: center;
-          margin-right: 0;
-          margin-bottom: 10px;
-          width: 100%;
-          box-sizing: border-box;
-        }
-
-        section {
-          padding: 20px 10px;
-        }
-
-        section h1 {
-          font-size: 1.8em;
-          margin-bottom: 25px;
-        }
-      }
-
-      @media (max-width: 360px) {
-        .grid__item {
-          padding: 12px;
-        }
-
-        .grid__item h2 {
-          font-size: 0.95em;
-        }
-
-        .grid__item p {
-          font-size: 0.8em;
-        }
-
-        section h1 {
-          font-size: 1.6em;
-        }
-      }
-    </style>
     <title>My Work</title>
   </head>
 
@@ -258,99 +60,370 @@
       <div class="grid">
         <!-- Meet App - React PWA -->
         <div class="grid__item">
+          <div class="project-image">
+            <img
+              src="img/meet-app-screenshot.jpg"
+              alt="Meet App Screenshot"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <div
+              class="image-placeholder"
+              style="
+                display: none;
+                background: #f0f0f0;
+                padding: 40px;
+                text-align: center;
+                color: #666;
+              "
+            >
+              📱 Screenshot Needed<br /><small
+                >Please add meet-app-screenshot.jpg</small
+              >
+            </div>
+          </div>
           <h2>Meet App - Enterprise PWA</h2>
+          <div class="project-goal">
+            <strong>Goal:</strong> Build a production-ready Progressive Web
+            Application for event discovery with Google Calendar integration,
+            focusing on offline functionality and real-time data visualization.
+          </div>
           <p>
-            A production-ready React Progressive Web Application with Google
-            Calendar integration, OAuth authentication, AWS Lambda serverless
-            backend, and comprehensive data visualization. Features include
-            offline support, real-time data charts, and comprehensive testing.
+            A comprehensive React PWA featuring OAuth 2.0 authentication, AWS
+            Lambda serverless backend, offline support, responsive design, and
+            data visualization charts. Includes comprehensive testing with Jest,
+            Cucumber, and Puppeteer for reliability.
           </p>
-          <a href="https://github.com/souravdas090300/meet" target="_blank"
-            >View on GitHub</a
-          >
-          <a href="https://souravdas090300.github.io/meet/" target="_blank"
-            >Live Demo</a
-          >
+          <div class="tech-stack">
+            <h4>Technologies Used:</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">React 18</span>
+              <span class="tech-tag">JavaScript ES6+</span>
+              <span class="tech-tag">PWA</span>
+              <span class="tech-tag">OAuth 2.0</span>
+              <span class="tech-tag">AWS Lambda</span>
+              <span class="tech-tag">Google Calendar API</span>
+              <span class="tech-tag">Jest</span>
+              <span class="tech-tag">Cucumber</span>
+              <span class="tech-tag">Puppeteer</span>
+              <span class="tech-tag">Recharts</span>
+            </div>
+          </div>
+          <div class="project-materials">
+            <h4>Project Materials:</h4>
+            <ul>
+              <li>User Stories & Acceptance Criteria</li>
+              <li>Test-Driven Development (TDD) approach</li>
+              <li>Serverless architecture documentation</li>
+              <li>PWA performance optimization</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/souravdas090300/meet" target="_blank"
+              >View on GitHub</a
+            >
+            <a href="https://souravdas090300.github.io/meet/" target="_blank"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+            <a href="https://github.com/souravdas090300/meet" target="_blank"
+              >View on GitHub</a
+            >
+            <a href="https://souravdas090300.github.io/meet/" target="_blank"
+              >Live Demo</a
+            >
+          </div>
         </div>
 
         <!-- myFlix Angular Client -->
         <div class="grid__item">
+          <div class="project-image">
+            <img
+              src="img/myflix-angular-screenshot.jpg"
+              alt="myFlix Angular Client Screenshot"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <div
+              class="image-placeholder"
+              style="
+                display: none;
+                background: #f0f0f0;
+                padding: 40px;
+                text-align: center;
+                color: #666;
+              "
+            >
+              🎬 Screenshot Needed<br /><small
+                >Please add myflix-angular-screenshot.jpg</small
+              >
+            </div>
+          </div>
           <h2>myFlix Angular Client - Enterprise SPA</h2>
+          <div class="project-goal">
+            <strong>Goal:</strong> Create a sophisticated single-page
+            application using Angular and TypeScript for movie discovery,
+            featuring modern Material Design and comprehensive user management.
+          </div>
           <p>
-            A sophisticated Angular single-page application with TypeScript for
-            movie discovery and user management. Features advanced Material
-            Design components, reactive forms, JWT authentication, and
-            comprehensive user profile management with favorites functionality.
+            A professional Angular application with TypeScript, featuring
+            advanced Material Design components, reactive forms, JWT
+            authentication, and comprehensive user profile management with
+            favorites functionality. Demonstrates enterprise-level Angular
+            development practices.
           </p>
-          <a
-            href="https://github.com/souravdas090300/myFlix-Angular-client"
-            target="_blank"
-            >View on GitHub</a
-          >
-          <a
-            href="https://souravdas090300.github.io/myFlix-Angular-client/welcome"
-            target="_blank"
-            >Live Demo</a
-          >
+          <div class="tech-stack">
+            <h4>Technologies Used:</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Material Design</span>
+              <span class="tech-tag">Reactive Forms</span>
+              <span class="tech-tag">JWT Authentication</span>
+              <span class="tech-tag">RxJS</span>
+              <span class="tech-tag">Angular CLI</span>
+              <span class="tech-tag">SCSS</span>
+            </div>
+          </div>
+          <div class="project-materials">
+            <h4>Project Materials:</h4>
+            <ul>
+              <li>User interface design wireframes</li>
+              <li>Component architecture documentation</li>
+              <li>Reactive forms validation patterns</li>
+              <li>Angular Material implementation guide</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/souravdas090300/myFlix-Angular-client"
+              target="_blank"
+              >View on GitHub</a
+            >
+            <a
+              href="https://souravdas090300.github.io/myFlix-Angular-client/welcome"
+              target="_blank"
+              >Live Demo</a
+            >
+            <a
+              href="https://trello.com/invite/b/68b594f905f60c4a38ec4d89/ATTI253ab37a517e904bd68fd18080aae20c6231E7EC/myflix-angular-client"
+              target="_blank"
+              >Kanban Board</a
+            >
+          </div>
         </div>
 
         <!-- myFlix React Client -->
         <div class="grid__item">
+          <div class="project-image">
+            <img
+              src="img/myflix-react-screenshot.jpg"
+              alt="myFlix React Client Screenshot"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <div
+              class="image-placeholder"
+              style="
+                display: none;
+                background: #f0f0f0;
+                padding: 40px;
+                text-align: center;
+                color: #666;
+              "
+            >
+              🎬 Screenshot Needed<br /><small
+                >Please add myflix-react-screenshot.jpg</small
+              >
+            </div>
+          </div>
           <h2>myFlix React Client - Modern Web Application</h2>
+          <div class="project-goal">
+            <strong>Goal:</strong> Build a modern React application
+            demonstrating functional components, React Router navigation, and
+            seamless API integration for movie discovery.
+          </div>
           <p>
             A modern React application showcasing functional components, React
             Bootstrap UI, React Router for navigation, and Parcel build tooling.
             Demonstrates advanced state management, responsive design, and
-            seamless API integration for movie data.
+            seamless API integration for movie data with comprehensive user
+            experience.
           </p>
-          <a
-            href="https://github.com/souravdas090300/myFlix-client"
-            target="_blank"
-            >View on GitHub</a
-          >
-          <a
-            href="https://github.com/souravdas090300/myFlix-client"
-            target="_blank"
-            >Live Demo</a
-          >
+          <div class="tech-stack">
+            <h4>Technologies Used:</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">JavaScript ES6+</span>
+              <span class="tech-tag">React Router</span>
+              <span class="tech-tag">React Bootstrap</span>
+              <span class="tech-tag">Parcel</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">RESTful API</span>
+              <span class="tech-tag">Responsive Design</span>
+            </div>
+          </div>
+          <div class="project-materials">
+            <h4>Project Materials:</h4>
+            <ul>
+              <li>Component architecture design</li>
+              <li>State management implementation</li>
+              <li>React Router navigation setup</li>
+              <li>API integration patterns</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/souravdas090300/myFlix-client"
+              target="_blank"
+              >View on GitHub</a
+            >
+            <a
+              href="https://github.com/souravdas090300/myFlix-client"
+              target="_blank"
+              >Live Demo</a
+            >
+          </div>
         </div>
 
         <!-- MovieFlix API -->
         <div class="grid__item">
+          <div class="project-image">
+            <img
+              src="img/movieflix-api-screenshot.jpg"
+              alt="MovieFlix API Documentation Screenshot"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <div
+              class="image-placeholder"
+              style="
+                display: none;
+                background: #f0f0f0;
+                padding: 40px;
+                text-align: center;
+                color: #666;
+              "
+            >
+              🗄️ Screenshot Needed<br /><small
+                >Please add movieflix-api-screenshot.jpg</small
+              >
+            </div>
+          </div>
           <h2>MovieFlix API - Full-Stack Backend</h2>
+          <div class="project-goal">
+            <strong>Goal:</strong> Create a comprehensive RESTful API backend
+            using Node.js and Express for movie data management with secure
+            authentication and database integration.
+          </div>
           <p>
-            A comprehensive Node.js/Express RESTful API with MongoDB database
-            integration. Features include JWT authentication, bcrypt password
-            hashing, data validation, CORS middleware, and complete CRUD
-            operations for movies and user management.
+            A robust Node.js/Express RESTful API with MongoDB database
+            integration, featuring JWT authentication, bcrypt password hashing,
+            data validation, CORS middleware, and complete CRUD operations for
+            movies and user management. Demonstrates full backend development
+            capabilities.
           </p>
-          <a href="https://github.com/souravdas090300/MovieFlix" target="_blank"
-            >View on GitHub</a
-          >
-          <a href="https://github.com/souravdas090300/MovieFlix" target="_blank"
-            >Documentation</a
-          >
+          <div class="tech-stack">
+            <h4>Technologies Used:</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Mongoose</span>
+              <span class="tech-tag">JWT</span>
+              <span class="tech-tag">bcrypt</span>
+              <span class="tech-tag">CORS</span>
+              <span class="tech-tag">RESTful API</span>
+              <span class="tech-tag">Heroku</span>
+            </div>
+          </div>
+          <div class="project-materials">
+            <h4>Project Materials:</h4>
+            <ul>
+              <li>API endpoint documentation</li>
+              <li>Database schema design</li>
+              <li>Authentication flow implementation</li>
+              <li>Error handling and validation</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/souravdas090300/MovieFlix"
+              target="_blank"
+              >View on GitHub</a
+            >
+            <a
+              href="https://github.com/souravdas090300/MovieFlix"
+              target="_blank"
+              >Documentation</a
+            >
+          </div>
         </div>
 
         <!-- To-Do List Vanilla JS -->
         <div class="grid__item">
+          <div class="project-image">
+            <img
+              src="img/todo-app-screenshot.jpg"
+              alt="To-Do List Application Screenshot"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <div
+              class="image-placeholder"
+              style="
+                display: none;
+                background: #f0f0f0;
+                padding: 40px;
+                text-align: center;
+                color: #666;
+              "
+            >
+              ✅ Screenshot Needed<br /><small
+                >Please add todo-app-screenshot.jpg</small
+              >
+            </div>
+          </div>
           <h2>Interactive To-Do List - Vanilla JavaScript</h2>
+          <div class="project-goal">
+            <strong>Goal:</strong> Demonstrate JavaScript fundamentals through a
+            feature-rich to-do application with DOM manipulation, local storage,
+            and interactive UI design.
+          </div>
           <p>
             A feature-rich to-do list application built with pure JavaScript,
             demonstrating DOM manipulation, local storage implementation, and
             interactive UI design. Includes task management, persistence, and
-            responsive design principles.
+            responsive design principles showcasing core JavaScript skills.
           </p>
-          <a
-            href="https://github.com/souravdas090300/to-do-list-js"
-            target="_blank"
-            >View on GitHub</a
-          >
-          <a
-            href="https://souravdas090300.github.io/to-do-list-js/"
-            target="_blank"
-            >Live Demo</a
-          >
+          <div class="tech-stack">
+            <h4>Technologies Used:</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">JavaScript ES6</span>
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">Local Storage</span>
+              <span class="tech-tag">DOM Manipulation</span>
+              <span class="tech-tag">Responsive Design</span>
+            </div>
+          </div>
+          <div class="project-materials">
+            <h4>Project Materials:</h4>
+            <ul>
+              <li>JavaScript fundamentals implementation</li>
+              <li>Local storage data persistence</li>
+              <li>Interactive UI/UX design</li>
+              <li>Cross-browser compatibility testing</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/souravdas090300/to-do-list-js"
+              target="_blank"
+              >View on GitHub</a
+            >
+            <a
+              href="https://souravdas090300.github.io/to-do-list-js/"
+              target="_blank"
+              >Live Demo</a
+            >
+          </div>
         </div>
 
         <!-- Portfolio Website -->
@@ -376,23 +449,90 @@
 
         <!-- Let's Chat - React Native App -->
         <div class="grid__item">
+          <div class="project-image">
+            <img
+              src="img/chat-app-screenshots.jpg"
+              alt="Let's Chat Mobile App Screenshots"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <div
+              class="image-placeholder"
+              style="
+                display: none;
+                background: #f0f0f0;
+                padding: 40px;
+                text-align: center;
+                color: #666;
+              "
+            >
+              📱 Mobile Screenshots Needed<br /><small
+                >Please add chat-app-screenshots.jpg</small
+              ><br /><em>Show multiple app screens</em>
+            </div>
+          </div>
           <h2>Let's Chat - React Native Chat Application</h2>
+          <div class="project-goal">
+            <strong>Goal:</strong> Develop a cross-platform mobile chat
+            application using React Native, focusing on real-time messaging,
+            offline functionality, and accessibility compliance.
+          </div>
           <p>
-            A cross-platform mobile chat application built with React Native and
-            Expo. Features real-time messaging with Firebase Firestore, image
-            sharing, location sharing, offline message storage, and full
-            accessibility compliance.
+            A feature-complete mobile chat application built with React Native
+            and Expo, featuring real-time messaging with Firebase Firestore,
+            image sharing, location sharing, offline message storage, and full
+            accessibility compliance. Demonstrates native mobile development
+            skills and modern app architecture.
           </p>
-          <a
-            href="https://github.com/souravdas090300/hello-world"
-            target="_blank"
-            >View on GitHub</a
+          <div class="tech-stack">
+            <h4>Technologies Used:</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">Expo SDK</span>
+              <span class="tech-tag">Firebase Firestore</span>
+              <span class="tech-tag">Firebase Authentication</span>
+              <span class="tech-tag">Firebase Storage</span>
+              <span class="tech-tag">React Navigation</span>
+              <span class="tech-tag">AsyncStorage</span>
+              <span class="tech-tag">Expo Location</span>
+              <span class="tech-tag">Expo ImagePicker</span>
+            </div>
+          </div>
+          <div class="project-materials">
+            <h4>Project Materials:</h4>
+            <ul>
+              <li>Mobile app user flows and wireframes</li>
+              <li>Accessibility testing documentation</li>
+              <li>Cross-platform compatibility testing</li>
+              <li>Firebase integration architecture</li>
+              <li>Offline functionality implementation</li>
+            </ul>
+          </div>
+          <div
+            class="mobile-note"
+            style="
+              background: #fff3cd;
+              padding: 10px;
+              border-radius: 5px;
+              margin-bottom: 15px;
+              border-left: 4px solid #ffc107;
+            "
           >
-          <a
-            href="https://github.com/souravdas090300/hello-world"
-            target="_blank"
-            >Documentation</a
-          >
+            <strong>📱 Mobile App Note:</strong> This is a React Native mobile
+            application. Screenshots show app functionality across different
+            screens. Code available on GitHub with setup instructions.
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/souravdas090300/hello-world"
+              target="_blank"
+              >View on GitHub</a
+            >
+            <a
+              href="https://github.com/souravdas090300/hello-world"
+              target="_blank"
+              >Documentation</a
+            >
+          </div>
         </div>
 
         <!-- Simple JS App - Pokédex -->
@@ -515,7 +655,7 @@
         </a>
         <!-- LinkedIn -->
         <a
-          href="https://www.linkedin.com/in/sourav-das-a34b29264/"
+          href="https://www.linkedin.com/in/sourav-das-150b89355"
           target="_blank"
         >
           <img src="img/linkdin.svg" alt="LinkedIn" />
