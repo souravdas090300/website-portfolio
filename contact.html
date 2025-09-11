@@ -91,39 +91,161 @@
         </a>
         <br />
       </div>
-      <section id="contact-form">
-        <h2>Get in Touch</h2>
-        <form action="submit_form.php" method="post">
-          <label class="standard-label" for="mobile">Mobile number: </label>
-          <input
-            type="tel"
-            id="mobile"
-            placeholder="00356 123 456 78"
-            name="mobile"
-          />
-          <br />
 
-          <label class="standard-label" for="email">Email: </label>
-          <input
-            type="email"
-            id="email"
-            placeholder="example@gmail.com"
-            name="email"
-            required
-          /><br />
+      <section id="contact-details">
+        <h2>Let's Connect</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>📧 Email</h3>
+            <p>For project inquiries and collaborations</p>
+            <a href="mailto:souravdas090300@gmail.com" class="contact-link">
+              souravdas090300@gmail.com
+            </a>
+          </div>
 
-          <label class="standard-label" for="message">Message:</label>
-          <textarea
-            id="message"
-            placeholder="Type here"
-            name="message"
-            required
-          ></textarea
-          ><br />
+          <div class="contact-card">
+            <h3>💼 LinkedIn</h3>
+            <p>Professional networking and career opportunities</p>
+            <a
+              href="https://www.linkedin.com/in/sourav-das-150b89355"
+              target="_blank"
+              class="contact-link"
+            >
+              Connect on LinkedIn
+            </a>
+          </div>
 
-          <button type="submit">Send Message</button>
-        </form>
+          <div class="contact-card">
+            <h3>🐙 GitHub</h3>
+            <p>View my code repositories and contributions</p>
+            <a
+              href="https://github.com/souravdas090300"
+              target="_blank"
+              class="contact-link"
+            >
+              Follow on GitHub
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <h3>📱 Phone</h3>
+            <p>Direct contact for urgent matters</p>
+            <a href="tel:+35677955097" class="contact-link">
+              +356 779 550 97
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <h3>🏠 Location</h3>
+            <p>Based in Malta, available for remote work</p>
+            <div class="location-text">
+              Hamrun, Malta<br />
+              Open to remote opportunities
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3>💬 Microsoft Teams</h3>
+            <p>Video meetings and professional discussions</p>
+            <a
+              href="microsoftteams:https://teams.live.com/meet/9316135476125?p=vxEg6nWkRzj201xGw3"
+              class="contact-link"
+            >
+              Schedule a Meeting
+            </a>
+          </div>
+        </div>
+
+        <div class="availability-note">
+          <h3>🕒 Availability</h3>
+          <p>
+            <strong>Open for new opportunities!</strong><br />
+            Available for full-time positions, freelance projects, and
+            collaborations.<br />
+            Response time: Within 24 hours for professional inquiries.
+          </p>
+        </div>
       </section>
+
+      <style>
+        .contact-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 20px;
+          margin: 30px 0;
+        }
+
+        .contact-card {
+          background: #ffffff;
+          padding: 25px;
+          border-radius: 10px;
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-card h3 {
+          color: #357b70;
+          margin-bottom: 10px;
+          font-size: 1.2em;
+        }
+
+        .contact-card p {
+          color: #666;
+          margin-bottom: 15px;
+          font-size: 0.9em;
+        }
+
+        .contact-link {
+          background: #357b70;
+          color: white;
+          padding: 10px 20px;
+          text-decoration: none;
+          border-radius: 25px;
+          font-weight: 500;
+          transition: background-color 0.3s ease;
+          display: inline-block;
+        }
+
+        .contact-link:hover {
+          background: #2b6259;
+          text-decoration: none;
+        }
+
+        .location-text {
+          color: #357b70;
+          font-weight: 500;
+        }
+
+        .availability-note {
+          background: linear-gradient(135deg, #357b70, #2b6259);
+          color: white;
+          padding: 25px;
+          border-radius: 10px;
+          text-align: center;
+          margin-top: 30px;
+        }
+
+        .availability-note h3 {
+          margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+          .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+          }
+
+          .contact-card {
+            padding: 20px;
+          }
+        }
+      </style>
     </main>
 
     <footer>
