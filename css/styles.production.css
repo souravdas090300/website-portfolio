@@ -10,7 +10,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: #00008b;
-  background-color: #fff;
 }
 
 h1 {
@@ -175,24 +174,28 @@ form > * {
   margin-bottom: 10px;
 }
 
-/* Grid Container - Main Layout */
+/* Grid Container - Simple CSS Grid Implementation */
 #grid__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #fff;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  padding: 20px !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  background-color: #fff !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 /* Grid Items - Individual Project Cards */
 .grid__item {
-  background-color: #bff4be;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  background-color: #bff4be !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transition: transform 0.3s ease !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
 }
 
 .grid__item:hover {
@@ -200,29 +203,26 @@ form > * {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Mobile Responsiveness */
-@media all and (max-width: 768px) {
+/* Responsive Grid */
+@media (max-width: 768px) {
   #grid__container {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
+    gap: 15px;
     padding: 15px;
-  }
-
-  body {
-    padding: 0 10px;
   }
 }
 
-@media all and (max-width: 500px) {
+@media (max-width: 500px) {
   #grid__container {
     grid-template-columns: 1fr;
-    grid-gap: 15px;
+    gap: 10px;
     padding: 10px;
   }
+}
 
-  .grid__item {
-    padding: 15px;
-  }
+.grid__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .animated-button {

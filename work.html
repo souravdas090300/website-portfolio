@@ -13,7 +13,55 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="css/styles.production.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/styles.production.css?v=123"
+    />
+    <style>
+      /* Force Grid Layout - Inline CSS Override */
+      #grid__container {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 20px !important;
+        padding: 20px !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        background-color: #fff !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .grid__item {
+        background-color: #bff4be !important;
+        padding: 20px !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+        transition: transform 0.3s ease !important;
+        box-sizing: border-box !important;
+        width: auto !important;
+      }
+
+      .grid__item:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        #grid__container {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 15px !important;
+        }
+      }
+
+      @media (max-width: 500px) {
+        #grid__container {
+          grid-template-columns: 1fr !important;
+          gap: 10px !important;
+        }
+      }
+    </style>
     <title>My Work</title>
   </head>
 
@@ -97,14 +145,6 @@
             </ul>
           </div>
           <div class="project-links">
-            <a href="https://github.com/souravdas090300/meet" target="_blank"
-              >View on GitHub</a
-            >
-            <a href="https://souravdas090300.github.io/meet/" target="_blank"
-              >Live Demo</a
-            >
-          </div>
-        </div>
             <a href="https://github.com/souravdas090300/meet" target="_blank"
               >View on GitHub</a
             >
@@ -213,9 +253,7 @@
               target="_blank"
               >View on GitHub</a
             >
-            <a
-              href="https://my-flix-clients.netlify.app/"
-              target="_blank"
+            <a href="https://my-flix-clients.netlify.app/" target="_blank"
               >Live Demo</a
             >
           </div>
@@ -350,34 +388,71 @@
         <!-- Let's Chat - React Native App -->
         <div class="grid__item">
           <div class="project-image">
-            <h3 style="margin-bottom: 15px; text-align: center;">📱 Mobile App Screenshots</h3>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+            <h3 style="margin-bottom: 15px; text-align: center">
+              📱 Mobile App Screenshots
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 10px;
+                margin-bottom: 15px;
+              "
+            >
               <img
                 src="img/1000126559.jpg"
                 alt="Chat App Screenshot 1"
-                style="width: 100%; height: auto; border-radius: 8px; max-height: 200px; object-fit: cover;"
+                style="
+                  width: 100%;
+                  height: auto;
+                  border-radius: 8px;
+                  max-height: 200px;
+                  object-fit: cover;
+                "
               />
               <img
                 src="img/thumbnail_1000126558.jpg"
                 alt="Chat App Screenshot 2"
-                style="width: 100%; height: auto; border-radius: 8px; max-height: 200px; object-fit: cover;"
+                style="
+                  width: 100%;
+                  height: auto;
+                  border-radius: 8px;
+                  max-height: 200px;
+                  object-fit: cover;
+                "
               />
               <img
                 src="img/thumbnail_1000126560.jpg"
                 alt="Chat App Screenshot 3"
-                style="width: 100%; height: auto; border-radius: 8px; max-height: 200px; object-fit: cover;"
+                style="
+                  width: 100%;
+                  height: auto;
+                  border-radius: 8px;
+                  max-height: 200px;
+                  object-fit: cover;
+                "
               />
             </div>
-            <div style="text-align: center; margin-bottom: 15px;">
-              <video 
-                controls 
-                style="width: 100%; max-width: 300px; height: auto; border-radius: 8px;"
+            <div style="text-align: center; margin-bottom: 15px">
+              <video
+                controls
+                style="
+                  width: 100%;
+                  max-width: 300px;
+                  height: auto;
+                  border-radius: 8px;
+                "
                 poster="img/1000126559.jpg"
               >
-                <source src="img/Screen Recording 2025-08-31 225728.mp4" type="video/mp4">
+                <source
+                  src="img/Screen Recording 2025-08-31 225728.mp4"
+                  type="video/mp4"
+                />
                 Your browser does not support the video tag.
               </video>
-              <p style="margin: 5px 0; font-size: 12px; color: #666;">📹 App Demo Video</p>
+              <p style="margin: 5px 0; font-size: 12px; color: #666">
+                📹 App Demo Video
+              </p>
             </div>
           </div>
           <h2>Let's Chat - React Native Chat Application</h2>
@@ -459,9 +534,7 @@
             target="_blank"
             >View on GitHub</a
           >
-          <a
-            href="https://das-js-app.netlify.app/"
-            target="_blank"
+          <a href="https://das-js-app.netlify.app/" target="_blank"
             >Live Demo</a
           >
         </div>
