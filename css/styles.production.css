@@ -175,98 +175,53 @@ form > * {
   margin-bottom: 10px;
 }
 
+/* Grid Container - Main Layout */
 #grid__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: #fff;
 }
 
-@media all and (max-width: 500px) {
-  #grid__container {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
+/* Grid Items - Individual Project Cards */
+.grid__item {
+  background-color: #bff4be;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-@media all and(max-width: 767px) {
+.grid__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Responsiveness */
+@media all and (max-width: 768px) {
+  #grid__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    padding: 15px;
+  }
+
   body {
     padding: 0 10px;
   }
 }
 
-#grid__container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  padding: 20px 0;
-}
-
-.grid__item {
-  background-color: #bff4be;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-@supports (display: grid) {
+@media all and (max-width: 500px) {
   #grid__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    margin: 0;
-    padding: 20px 0;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    padding: 10px;
   }
 
   .grid__item {
-    background-color: #bff4be;
-    width: auto;
-    min-height: auto;
-    margin: 0;
-    padding: 20px;
-    border-radius: 8px;
-  }
-
-  @media all and (max-width: 500px) {
-    #grid__container {
-      grid-template-columns: 1fr;
-      grid-gap: 15px;
-      padding: 10px;
-    }
-  }
-
-  @media all and (min-width: 500px) and (max-width: 750px) {
-    #grid__container {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 15px;
-    }
-  }
-
-  @media all and (max-width: 750px) {
-    #grid__container {
-      grid-gap: 10px;
-    }
-
-    @media all and (max-width: 500px) {
-      #header-img {
-        max-width: 150px;
-        max-height: 150px;
-      }
-    }
-
-    #index-main {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      text-align: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      padding: 10px;
-    }
-
-    h1 {
-      font-size: 22px;
-    }
+    padding: 15px;
   }
 }
 
