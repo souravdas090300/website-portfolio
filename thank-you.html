@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You - Saurabh Das Portfolio</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.production.css" />
+    <style>
+      .thank-you-container {
+        max-width: 600px;
+        margin: 100px auto;
+        padding: 40px;
+        text-align: center;
+        background: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .thank-you-icon {
+        font-size: 64px;
+        margin-bottom: 20px;
+      }
+
+      .thank-you-title {
+        color: #357b70;
+        margin-bottom: 20px;
+      }
+
+      .thank-you-message {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        color: #2b2b2b;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .action-btn {
+        background: #357b70;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .action-btn:hover {
+        background: #2c6356;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(53, 123, 112, 0.3);
+      }
+
+      .secondary-btn {
+        background: transparent;
+        color: #357b70;
+        border: 2px solid #357b70;
+      }
+
+      .secondary-btn:hover {
+        background: #357b70;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        .thank-you-container {
+          margin: 50px 20px;
+          padding: 30px 20px;
+        }
+
+        .action-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .action-btn {
+          width: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="page-header">
+      <img
+        src="img/Das.png"
+        alt="logo"
+        id="header-img"
+        class="page-header__item"
+      />
+      <nav class="main-navigation page-header__item">
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a href="index.html" role="menuitem" class="navigation-list__item"
+              >Home</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="about.html" role="menuitem" class="navigation-list__item"
+              >About</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="work.html" role="menuitem" class="navigation-list__item"
+              >Work</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="contact.html"
+              role="menuitem"
+              class="navigation-list__item navigation-list__item--active"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="thank-you-container">
+        <div class="thank-you-icon">🎉</div>
+        <h1 class="thank-you-title">Thank You!</h1>
+        <div class="thank-you-message">
+          <p><strong>Your message has been sent successfully!</strong></p>
+          <p>
+            I appreciate you taking the time to reach out. I'll review your
+            message and get back to you within 24 hours.
+          </p>
+          <p>
+            In the meantime, feel free to explore my portfolio or connect with
+            me on social media.
+          </p>
+        </div>
+        <div class="action-buttons">
+          <a href="work.html" class="action-btn">View My Work</a>
+          <a href="about.html" class="action-btn secondary-btn"
+            >Learn About Me</a
+          >
+          <a href="index.html" class="action-btn secondary-btn">Go Home</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <p>Find me on</p>
+      <div class="social-media">
+        <a href="https://github.com/souravdas090300" target="_blank">
+          <img src="img/github.svg" alt="Github" />
+        </a>
+        <a href="https://twitter.com/your-username" target="_blank">
+          <img src="img/twitter.svg" alt="Twitter" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/sourav-das-150b89355"
+          target="_blank"
+        >
+          <img src="img/linkdin.svg" alt="LinkedIn" />
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      // Auto-redirect after 30 seconds
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 30000);
+
+      // Show countdown
+      let countdown = 30;
+      const timer = setInterval(() => {
+        countdown--;
+        if (countdown <= 0) {
+          clearInterval(timer);
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
