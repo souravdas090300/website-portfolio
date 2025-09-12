@@ -589,3 +589,357 @@ footer {
     max-width: 100%;
   }
 }
+
+/* ========================================
+   COMPREHENSIVE MOBILE RESPONSIVENESS
+   ======================================== */
+
+/* Mobile Header & Navigation */
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    padding: 15px 10px;
+    gap: 15px;
+  }
+
+  #header-img {
+    max-width: 150px;
+    height: auto;
+  }
+
+  .navigation-list {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation-list__item {
+    padding: 12px 20px;
+    display: block;
+    border-radius: 6px;
+    background: rgba(53, 123, 112, 0.1);
+    margin: 5px 0;
+  }
+
+  .navigation-list__item--active {
+    background: #357b70;
+    color: white;
+  }
+}
+
+/* Mobile Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 15px;
+    text-align: left;
+  }
+
+  body {
+    padding: 0 10px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile Home Page (index.html) */
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .profile__portrait {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+  }
+
+  .profile__text {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* Center buttons on mobile */
+  .profile a {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    max-width: 250px;
+  }
+}
+
+/* Mobile About Page (about.html) */
+@media (max-width: 768px) {
+  #about-main {
+    padding: 20px 15px;
+    flex-direction: column;
+  }
+
+  .about-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-list {
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .about-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  /* Mobile table for about page */
+  table {
+    width: 100%;
+    font-size: 14px;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  tr {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  td {
+    border: none;
+    padding: 5px 0;
+    text-align: left;
+  }
+
+  td:before {
+    content: attr(data-label) ": ";
+    font-weight: bold;
+    color: #357b70;
+  }
+}
+
+/* Mobile Contact Page (contact.html) */
+@media (max-width: 768px) {
+  #contact-main {
+    padding: 20px 15px;
+  }
+
+  #contact-main > div {
+    font-size: 16px;
+    padding: 15px;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  #contact-main a {
+    word-break: break-all;
+    display: block;
+    margin: 5px 0;
+  }
+
+  /* Contact details grid mobile */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+    margin: 20px 0 !important;
+  }
+
+  .contact-card {
+    padding: 20px !important;
+  }
+
+  .contact-card h3 {
+    font-size: 18px;
+  }
+
+  .contact-card p {
+    font-size: 14px;
+    padding: 0;
+  }
+
+  /* Contact form mobile */
+  #contact-form-section {
+    padding: 25px 15px !important;
+    margin: 25px 0 !important;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 14px 16px;
+  }
+
+  .submit-btn {
+    padding: 16px 20px;
+    font-size: 18px;
+  }
+}
+
+/* Mobile Footer */
+@media (max-width: 768px) {
+  .page-footer {
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .social-media {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .social-media img {
+    width: 40px;
+    height: 40px;
+  }
+
+  footer {
+    padding: 20px 15px;
+    text-align: center;
+  }
+
+  footer h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  footer a {
+    margin: 0 10px;
+  }
+
+  footer div {
+    margin-top: 20px;
+  }
+
+  footer div a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(53, 123, 112, 0.1);
+    border-radius: 6px;
+  }
+}
+
+/* Extra Small Mobile (480px and below) */
+@media (max-width: 480px) {
+  .page-header {
+    padding: 10px 5px;
+  }
+
+  #header-img {
+    max-width: 120px;
+  }
+
+  h1 {
+    font-size: 24px;
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+
+  p {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  body {
+    padding: 0 5px;
+  }
+
+  .profile__portrait {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact-card {
+    padding: 15px !important;
+  }
+
+  #contact-form-section {
+    padding: 20px 10px !important;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 14px;
+  }
+}
+
+/* Landscape Mobile Orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .page-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .navigation-list {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .navigation-list__item {
+    padding: 8px 16px;
+    margin: 0;
+  }
+
+  #header-img {
+    max-width: 100px;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (pointer: coarse) {
+  button,
+  .navigation-list__item,
+  .contact-link,
+  .submit-btn {
+    min-height: 44px; /* Apple's recommended touch target size */
+    padding: 12px 20px;
+  }
+
+  /* Larger tap targets for mobile */
+  a {
+    padding: 8px 4px;
+  }
+}
+
+/* High DPI Display Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
