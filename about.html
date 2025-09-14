@@ -158,42 +158,80 @@
         </div>
       </div>
 
-      <h3>Featured Projects Highlights</h3>
-      <div class="projects-highlights">
-        <div class="project-highlight">
+      <div class="project-highlights">
+        <h3>Featured Projects Highlights</h3>
+
+        <div class="featured-project">
           <h4>🚀 Enterprise Applications</h4>
           <p>
             <strong>Meet App:</strong> Production-ready React PWA with Google
             Calendar integration, OAuth authentication, and AWS Lambda backend
             featuring comprehensive data visualization and offline support.
           </p>
+          <div class="project-tech-stack">
+            <span class="tech-badge">React PWA</span>
+            <span class="tech-badge">AWS Lambda</span>
+            <span class="tech-badge">OAuth 2.0</span>
+            <span class="tech-badge">Google Calendar API</span>
+          </div>
+          <a href="work.html#meet-app" class="project-link-highlight"
+            >View Project Details</a
+          >
         </div>
 
-        <div class="project-highlight">
+        <div class="featured-project">
           <h4>🎬 Full-Stack Movie Applications</h4>
           <p>
             <strong>myFlix Platform:</strong> Complete movie discovery ecosystem
             with Angular & React clients, Node.js/Express API, MongoDB database,
             and comprehensive user management with JWT authentication.
           </p>
+          <div class="project-tech-stack">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Angular</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">JWT</span>
+          </div>
+          <a href="work.html#movieflix-api" class="project-link-highlight"
+            >View Project Details</a
+          >
         </div>
 
-        <div class="project-highlight">
+        <div class="featured-project">
           <h4>📱 Mobile Chat Application</h4>
           <p>
             <strong>Let's Chat:</strong> Cross-platform React Native app with
             Firebase integration, real-time messaging, image sharing, and full
             accessibility compliance.
           </p>
+          <div class="project-tech-stack">
+            <span class="tech-badge">React Native</span>
+            <span class="tech-badge">Firebase</span>
+            <span class="tech-badge">Real-time DB</span>
+            <span class="tech-badge">Expo</span>
+          </div>
+          <a href="work.html#chat-app" class="project-link-highlight"
+            >View Project Details</a
+          >
         </div>
 
-        <div class="project-highlight">
+        <div class="featured-project">
           <h4>🍳 Recipe Management System</h4>
           <p>
             <strong>Recipe App:</strong> Full-stack application combining React
             frontend with Python Django backend, featuring advanced search, user
             authentication, and data visualization.
           </p>
+          <div class="project-tech-stack">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Django</span>
+            <span class="tech-badge">PostgreSQL</span>
+          </div>
+          <a href="work.html#recipe-app" class="project-link-highlight"
+            >View Project Details</a
+          >
         </div>
       </div>
 
@@ -300,30 +338,70 @@
           padding-bottom: 5px;
         }
       </style>
-      <a
-        href="files/cv-sourav-das.pdf"
-        target="_blank"
-        class="animated-button"
-        id="button1"
-        download
-        >Download My CV</a
-      >
-      <a
-        href="files/cv-sourav-das.pdf"
-        target="_blank"
-        class="animated-button"
-        id="button2"
-        download
-        >Download My CV</a
-      >
-      <a
-        href="files/cv-sourav-das.pdf"
-        target="_blank"
-        class="animated-button"
-        id="button3"
-        download
-        >Download My CV</a
-      >
+
+      <!-- Skills Summary Section -->
+      <div class="skills-summary">
+        <h3>🎯 Skills Summary</h3>
+        <p>
+          Comprehensive expertise across the full development stack with 12+
+          production-ready projects showcasing modern web and mobile
+          technologies.
+        </p>
+
+        <div class="skills-stats">
+          <div class="stat-item">
+            <span class="stat-number">12+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">8</span>
+            <span class="stat-label">Tech Stacks</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Success Rate</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Available</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CV Download Section -->
+      <div class="cv-download-section">
+        <h3>📄 Download My Resume</h3>
+        <p>
+          Get a comprehensive overview of my experience, projects, and technical
+          skills
+        </p>
+        <div class="cv-buttons-container">
+          <a
+            href="files/cv-sourav-das.pdf"
+            target="_blank"
+            class="animated-button"
+            id="button1"
+            download
+            >Download My CV</a
+          >
+          <a
+            href="files/cv-sourav-das.pdf"
+            target="_blank"
+            class="animated-button"
+            id="button2"
+            download
+            >Download My CV</a
+          >
+          <a
+            href="files/cv-sourav-das.pdf"
+            target="_blank"
+            class="animated-button"
+            id="button3"
+            download
+            >Download My CV</a
+          >
+        </div>
+      </div>
       <svg
         id="about-picture"
         xmlns="http://www.w3.org/2000/svg"
@@ -347,8 +425,8 @@
             ></path>
           </g>
           <path
-            fill="#B5CE6F"
-            d="M646.484,484.382 C646.484,489.501 644.531,494.62 640.627,498.525 C636.722,502.43 631.603,504.382 626.484,504.382 L60.873,504.382 C55.754,504.382 50.636,502.43 46.731,498.525 C42.826,494.62 40.873,489.501 40.873,484.382 L40.873,471.917 L646.484,471.917 L646.484,484.382"
+            fill="#8B7355"
+            d="M646.484,484.382 C646.484,489.501 644.531,494.62 640.627,498.525 C636.722,502.43 631.603,504.382 626.484,504.382 L60.873,504.382 C55.754,504.382 50.636,502.43 46.731,498.525 C42.826,494.620 40.873,489.501 40.873,484.382 L40.873,471.917 L646.484,471.917 L646.484,484.382"
           ></path>
           <polyline
             fill="#67C2E2"
@@ -2591,25 +2669,32 @@
         </tbody>
       </table>
     </main>
-    <footer>
+    <footer class="page-footer">
       <h1>Find me on</h1>
 
-      <a href="https://github.com/souravdas090300" target="_blank">
-        <img src="img/github.svg" width="30" height="30" alt="Github" />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/sourav-das-150b89355"
-        target="_blank"
-      >
-        <img src="img/linkdin.svg" width="30" height="30" alt="LinkedIn" />
-      </a>
-      <a href="https://twitter.com/souravdas090300" target="_blank">
-        <img src="img/twitter.svg" width="30" height="30" alt="Twitter" />
-      </a>
+      <div class="social-links">
+        <a href="https://github.com/souravdas090300" target="_blank">
+          <img src="img/github.svg" width="30" height="30" alt="Github" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/sourav-das-150b89355"
+          target="_blank"
+        >
+          <img src="img/linkdin.svg" width="30" height="30" alt="LinkedIn" />
+        </a>
+        <a href="https://twitter.com/souravdas090300" target="_blank">
+          <img src="img/twitter.svg" width="30" height="30" alt="Twitter" />
+        </a>
+      </div>
 
       <div>
         <a href="index.html">Go To Home</a>
         <a href="work.html">View My Work</a>
+        <a href="contact.html">Contact Me</a>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2025 Sourav Das. All rights reserved.</p>
       </div>
     </footer>
     <script src="js/tota11y.min.js"></script>
