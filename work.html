@@ -145,11 +145,11 @@
             </ul>
           </div>
           <div class="project-links">
-            <a href="https://github.com/souravdas090300/meet" target="_blank"
-              >View on GitHub</a
+            <a href="https://github.com/souravdas090300/meet" target="_blank" class="github-link"
+              >📁 View Source Code</a
             >
-            <a href="https://souravdas090300.github.io/meet/" target="_blank"
-              >Live Demo</a
+            <a href="https://souravdas090300.github.io/meet/" target="_blank" class="api-link"
+              >🚀 Live Demo</a
             >
           </div>
         </div>
@@ -291,27 +291,107 @@
           <div class="project-materials">
             <h4>Project Materials:</h4>
             <ul>
-              <li>API endpoint documentation</li>
-              <li>Database schema design</li>
-              <li>Authentication flow implementation</li>
-              <li>Error handling and validation</li>
+              <li>Complete API endpoint documentation with examples</li>
+              <li>Database schema design and relationships</li>
+              <li>JWT authentication and authorization flow</li>
+              <li>Error handling and validation patterns</li>
+              <li>Deployment configuration and environment setup</li>
             </ul>
+            
+            <!-- Comprehensive API Documentation -->
+            <div class="api-documentation" id="movieflix-api-docs">
+              <h4>📚 Complete API Documentation</h4>
+              
+              <div class="api-section">
+                <h5>🔐 Authentication Endpoints</h5>
+                <div class="endpoint">
+                  <strong>POST /users</strong> - Register new user
+                  <p>Creates a new user account with hashed password</p>
+                  <pre><code>Request: {"Username": "john", "Password": "secret123", "Email": "john@email.com"}</code></pre>
+                </div>
+                <div class="endpoint">
+                  <strong>POST /login</strong> - User authentication
+                  <p>Returns JWT token for authenticated requests</p>
+                  <pre><code>Request: {"Username": "john", "Password": "secret123"}</code></pre>
+                </div>
+              </div>
+
+              <div class="api-section">
+                <h5>🎬 Movie Endpoints</h5>
+                <div class="endpoint">
+                  <strong>GET /movies</strong> - Get all movies
+                  <p>Returns complete list of movies with details</p>
+                </div>
+                <div class="endpoint">
+                  <strong>GET /movies/:title</strong> - Get movie by title
+                  <p>Returns specific movie information including genre and director</p>
+                </div>
+                <div class="endpoint">
+                  <strong>GET /movies/genres/:name</strong> - Get movies by genre
+                  <p>Returns movies filtered by specific genre</p>
+                </div>
+                <div class="endpoint">
+                  <strong>GET /movies/directors/:name</strong> - Get movies by director
+                  <p>Returns movies by specific director with bio information</p>
+                </div>
+              </div>
+
+              <div class="api-section">
+                <h5>👤 User Management</h5>
+                <div class="endpoint">
+                  <strong>GET /users/:username</strong> - Get user profile
+                  <p>Returns user information (authentication required)</p>
+                </div>
+                <div class="endpoint">
+                  <strong>PUT /users/:username</strong> - Update user info
+                  <p>Update user profile information</p>
+                </div>
+                <div class="endpoint">
+                  <strong>POST /users/:username/movies/:movieID</strong> - Add to favorites
+                  <p>Add movie to user's favorite list</p>
+                </div>
+                <div class="endpoint">
+                  <strong>DELETE /users/:username/movies/:movieID</strong> - Remove from favorites
+                  <p>Remove movie from user's favorite list</p>
+                </div>
+                <div class="endpoint">
+                  <strong>DELETE /users/:username</strong> - Delete user account
+                  <p>Permanently delete user account and all associated data</p>
+                </div>
+              </div>
+
+              <div class="api-features">
+                <h5>🚀 Technical Implementation</h5>
+                <ul>
+                  <li><strong>Security:</strong> JWT authentication, bcrypt password hashing, CORS protection</li>
+                  <li><strong>Database:</strong> MongoDB with Mongoose ODM for data modeling and relationships</li>
+                  <li><strong>Validation:</strong> Input validation and sanitization for all endpoints</li>
+                  <li><strong>Error Handling:</strong> Comprehensive error responses with proper HTTP status codes</li>
+                  <li><strong>Documentation:</strong> Well-documented endpoints with example requests/responses</li>
+                  <li><strong>Deployment:</strong> Production-ready deployment on Heroku with environment variables</li>
+                  <li><strong>Testing:</strong> Postman collection available for endpoint testing</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="project-links">
             <a
               href="https://github.com/souravdas090300/movieFlix_api.git"
               target="_blank"
-              >View on GitHub</a
+              class="github-link"
+              >📁 View Source Code</a
             >
             <a
               href="https://movie-flix-fb6c35ebba0a.herokuapp.com/"
               target="_blank"
-              >Live API</a
+              class="api-link"
+              >🚀 Live API Server</a
             >
             <a
-              href="https://github.com/souravdas090300/movieFlix_api.git"
-              target="_blank"
-              >Documentation</a
+              href="#movieflix-api-docs"
+              class="docs-link"
+              onclick="scrollToApiDocs()"
+              >📚 Complete Documentation</a
             >
           </div>
         </div>
@@ -542,26 +622,43 @@
     </section>
 
     <footer class="page-footer">
-      <p>Find me on</p>
-      <div class="social-media">
-        <!-- Github -->
+      <h1>Find me on</h1>
+      
+      <div class="social-links">
         <a href="https://github.com/souravdas090300" target="_blank">
-          <img src="img/github.svg" alt="Github" />
+          <img src="img/github.svg" width="30" height="30" alt="Github" />
         </a>
-        <!-- Twitter -->
-        <a href="https://twitter.com/your-username" target="_blank">
-          <img src="img/twitter.svg" alt="Twitter" />
+        <a href="https://twitter.com/souravdas090300" target="_blank">
+          <img src="img/twitter.svg" width="30" height="30" alt="Twitter" />
         </a>
-        <!-- LinkedIn -->
         <a
           href="https://www.linkedin.com/in/sourav-das-150b89355"
           target="_blank"
         >
-          <img src="img/linkdin.svg" alt="LinkedIn" />
+          <img src="img/linkdin.svg" width="30" height="30" alt="LinkedIn" />
         </a>
+      </div>
+
+      <div>
+        <a href="index.html">Go To Home</a>
+        <a href="about.html">About Me</a>
+        <a href="contact.html">Contact Me</a>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Sourav Das. All rights reserved.</p>
       </div>
     </footer>
 
     <script src="js/tota11y.min.js"></script>
+    <script>
+      // Smooth scroll to API documentation
+      function scrollToApiDocs() {
+        document.getElementById('movieflix-api-docs').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    </script>
   </body>
 </html>
