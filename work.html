@@ -297,82 +297,6 @@
               <li>Error handling and validation patterns</li>
               <li>Deployment configuration and environment setup</li>
             </ul>
-            
-            <!-- Comprehensive API Documentation -->
-            <div class="api-documentation" id="movieflix-api-docs">
-              <h4>📚 Complete API Documentation</h4>
-              
-              <div class="api-section">
-                <h5>🔐 Authentication Endpoints</h5>
-                <div class="endpoint">
-                  <strong>POST /users</strong> - Register new user
-                  <p>Creates a new user account with hashed password</p>
-                  <pre><code>Request: {"Username": "john", "Password": "secret123", "Email": "john@email.com"}</code></pre>
-                </div>
-                <div class="endpoint">
-                  <strong>POST /login</strong> - User authentication
-                  <p>Returns JWT token for authenticated requests</p>
-                  <pre><code>Request: {"Username": "john", "Password": "secret123"}</code></pre>
-                </div>
-              </div>
-
-              <div class="api-section">
-                <h5>🎬 Movie Endpoints</h5>
-                <div class="endpoint">
-                  <strong>GET /movies</strong> - Get all movies
-                  <p>Returns complete list of movies with details</p>
-                </div>
-                <div class="endpoint">
-                  <strong>GET /movies/:title</strong> - Get movie by title
-                  <p>Returns specific movie information including genre and director</p>
-                </div>
-                <div class="endpoint">
-                  <strong>GET /movies/genres/:name</strong> - Get movies by genre
-                  <p>Returns movies filtered by specific genre</p>
-                </div>
-                <div class="endpoint">
-                  <strong>GET /movies/directors/:name</strong> - Get movies by director
-                  <p>Returns movies by specific director with bio information</p>
-                </div>
-              </div>
-
-              <div class="api-section">
-                <h5>👤 User Management</h5>
-                <div class="endpoint">
-                  <strong>GET /users/:username</strong> - Get user profile
-                  <p>Returns user information (authentication required)</p>
-                </div>
-                <div class="endpoint">
-                  <strong>PUT /users/:username</strong> - Update user info
-                  <p>Update user profile information</p>
-                </div>
-                <div class="endpoint">
-                  <strong>POST /users/:username/movies/:movieID</strong> - Add to favorites
-                  <p>Add movie to user's favorite list</p>
-                </div>
-                <div class="endpoint">
-                  <strong>DELETE /users/:username/movies/:movieID</strong> - Remove from favorites
-                  <p>Remove movie from user's favorite list</p>
-                </div>
-                <div class="endpoint">
-                  <strong>DELETE /users/:username</strong> - Delete user account
-                  <p>Permanently delete user account and all associated data</p>
-                </div>
-              </div>
-
-              <div class="api-features">
-                <h5>🚀 Technical Implementation</h5>
-                <ul>
-                  <li><strong>Security:</strong> JWT authentication, bcrypt password hashing, CORS protection</li>
-                  <li><strong>Database:</strong> MongoDB with Mongoose ODM for data modeling and relationships</li>
-                  <li><strong>Validation:</strong> Input validation and sanitization for all endpoints</li>
-                  <li><strong>Error Handling:</strong> Comprehensive error responses with proper HTTP status codes</li>
-                  <li><strong>Documentation:</strong> Well-documented endpoints with example requests/responses</li>
-                  <li><strong>Deployment:</strong> Production-ready deployment on Heroku with environment variables</li>
-                  <li><strong>Testing:</strong> Postman collection available for endpoint testing</li>
-                </ul>
-              </div>
-            </div>
           </div>
           <div class="project-links">
             <a
@@ -388,9 +312,9 @@
               >🚀 Live API Server</a
             >
             <a
-              href="#movieflix-api-docs"
+              href="https://movie-flix-fb6c35ebba0a.herokuapp.com/documentation"
+              target="_blank"
               class="docs-link"
-              onclick="scrollToApiDocs()"
               >📚 Complete Documentation</a
             >
           </div>
@@ -591,11 +515,6 @@
               href="https://github.com/souravdas090300/hello-world"
               target="_blank"
               >View on GitHub</a
-            >
-            <a
-              href="https://github.com/souravdas090300/hello-world"
-              target="_blank"
-              >Documentation</a
             >
           </div>
         </div>
