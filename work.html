@@ -61,6 +61,180 @@
           gap: 10px !important;
         }
       }
+
+      /* Professional Button Styling - Different Colors by Type */
+      .project-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Base button styling */
+      .github-link,
+      .api-link,
+      a[href*="github"],
+      a[href*="netlify"],
+      a[href*="firebase"],
+      a[href*="pages"],
+      .grid__item a,
+      .project-links a {
+        color: white !important;
+        padding: 14px 28px !important;
+        text-decoration: none !important;
+        border-radius: 35px !important;
+        font-weight: 700 !important;
+        font-size: 15px !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+        border: 2px solid rgba(255, 255, 255, 0.2) !important;
+        min-width: 160px !important;
+        justify-content: center !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        position: relative !important;
+        overflow: hidden !important;
+      }
+
+      /* GitHub buttons - Dark theme */
+      .github-link,
+      a[href*="github"] {
+        background: linear-gradient(145deg, #24292e, #1a1e22) !important;
+        box-shadow: 0 6px 20px rgba(36, 41, 46, 0.4) !important;
+      }
+
+      .github-link:hover,
+      a[href*="github"]:hover {
+        background: linear-gradient(145deg, #2f363d, #24292e) !important;
+        transform: translateY(-4px) scale(1.05) !important;
+        box-shadow: 0 10px 30px rgba(36, 41, 46, 0.6) !important;
+        border-color: rgba(255, 255, 255, 0.4) !important;
+      }
+
+      /* Live Demo buttons - Green theme */
+      .api-link,
+      a[href*="netlify"],
+      a[href*="firebase"],
+      a[href*="pages"] {
+        background: linear-gradient(145deg, #28a745, #1e7e34) !important;
+        box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4) !important;
+      }
+
+      .api-link:hover,
+      a[href*="netlify"]:hover,
+      a[href*="firebase"]:hover,
+      a[href*="pages"]:hover {
+        background: linear-gradient(145deg, #34ce57, #28a745) !important;
+        transform: translateY(-4px) scale(1.05) !important;
+        box-shadow: 0 10px 30px rgba(40, 167, 69, 0.6) !important;
+        border-color: rgba(255, 255, 255, 0.4) !important;
+      }
+
+      /* Documentation buttons - Blue theme */
+      a[href*="docs"],
+      a[href*="documentation"] {
+        background: linear-gradient(145deg, #007bff, #0056b3) !important;
+        box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4) !important;
+      }
+
+      a[href*="docs"]:hover,
+      a[href*="documentation"]:hover {
+        background: linear-gradient(145deg, #0d6efd, #007bff) !important;
+        transform: translateY(-4px) scale(1.05) !important;
+        box-shadow: 0 10px 30px rgba(0, 123, 255, 0.6) !important;
+        border-color: rgba(255, 255, 255, 0.4) !important;
+      }
+
+      /* Active states for all button types */
+      .github-link:active,
+      .api-link:active,
+      a[href*="github"]:active,
+      a[href*="netlify"]:active,
+      a[href*="firebase"]:active,
+      a[href*="pages"]:active,
+      a[href*="docs"]:active,
+      .grid__item a:active,
+      .project-links a:active {
+        transform: translateY(-2px) scale(1.02) !important;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+      }
+
+      /* Shimmer effect for all buttons */
+      .github-link::before,
+      .api-link::before,
+      a[href*="github"]::before,
+      a[href*="netlify"]::before,
+      a[href*="firebase"]::before,
+      a[href*="pages"]::before,
+      a[href*="docs"]::before,
+      .grid__item a::before,
+      .project-links a::before {
+        content: "" !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: -100% !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        ) !important;
+        transition: left 0.5s !important;
+      }
+
+      .github-link:hover::before,
+      .api-link:hover::before,
+      a[href*="github"]:hover::before,
+      a[href*="netlify"]:hover::before,
+      a[href*="firebase"]:hover::before,
+      a[href*="pages"]:hover::before,
+      a[href*="docs"]:hover::before,
+      .grid__item a:hover::before,
+      .project-links a:hover::before {
+        left: 100% !important;
+      }
+
+      /* Footer navigation links */
+      footer a {
+        background: linear-gradient(145deg, #357b70, #2b6259) !important;
+        color: white !important;
+        padding: 10px 20px !important;
+        text-decoration: none !important;
+        border-radius: 25px !important;
+        font-weight: 500 !important;
+        transition: all 0.3s ease !important;
+        display: inline-block !important;
+        margin: 5px !important;
+      }
+
+      footer a:hover {
+        background: linear-gradient(145deg, #2b6259, #1f4a42) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 15px rgba(53, 123, 112, 0.3) !important;
+      }
+
+      @media (max-width: 768px) {
+        .project-links {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .github-link,
+        .api-link,
+        a[href*="github"],
+        a[href*="netlify"],
+        a[href*="firebase"],
+        a[href*="pages"] {
+          width: 100%;
+          max-width: 200px;
+        }
+      }
     </style>
     <title>My Work</title>
   </head>
@@ -145,10 +319,16 @@
             </ul>
           </div>
           <div class="project-links">
-            <a href="https://github.com/souravdas090300/meet" target="_blank" class="github-link"
+            <a
+              href="https://github.com/souravdas090300/meet"
+              target="_blank"
+              class="github-link"
               >📁 View Source Code</a
             >
-            <a href="https://souravdas090300.github.io/meet/" target="_blank" class="api-link"
+            <a
+              href="https://souravdas090300.github.io/meet/"
+              target="_blank"
+              class="api-link"
               >🚀 Live Demo</a
             >
           </div>
@@ -377,16 +557,20 @@
             markup, accessibility compliance, and optimized performance with CSS
             Grid and Flexbox layouts.
           </p>
-          <a
-            href="https://github.com/souravdas090300/website-portfolio.git
-            target="_blank"
-            >View on GitHub</a
-          >
-          <a
-            href="https://app.netlify.com/projects/stately-granita-d3be28/"
-            target="_blank"
-            >Live Demo</a
-          >
+          <div class="project-links">
+            <a
+              href="https://github.com/souravdas090300/website-portfolio.git"
+              target="_blank"
+              class="github-link"
+              >📁 View Source Code</a
+            >
+            <a
+              href="https://stately-granita-d3be28.netlify.app/"
+              target="_blank"
+              class="api-link"
+              >🚀 Live Demo</a
+            >
+          </div>
         </div>
 
         <!-- Let's Chat - React Native App -->
@@ -528,21 +712,27 @@
             styling, and jQuery DOM manipulation. Features search functionality,
             modal displays, and responsive design.
           </p>
-          <a
-            href="https://github.com/souravdas090300/simple-js-app"
-            target="_blank"
-            >View on GitHub</a
-          >
-          <a href="https://das-js-app.netlify.app/" target="_blank"
-            >Live Demo</a
-          >
+          <div class="project-links">
+            <a
+              href="https://github.com/souravdas090300/simple-js-app"
+              target="_blank"
+              class="github-link"
+              >📁 View Source Code</a
+            >
+            <a
+              href="https://das-js-app.netlify.app/"
+              target="_blank"
+              class="api-link"
+              >🚀 Live Demo</a
+            >
+          </div>
         </div>
       </div>
     </section>
 
     <footer class="page-footer">
       <h1>Find me on</h1>
-      
+
       <div class="social-links">
         <a href="https://github.com/souravdas090300" target="_blank">
           <img src="img/github.svg" width="30" height="30" alt="Github" />
@@ -563,7 +753,7 @@
         <a href="about.html">About Me</a>
         <a href="contact.html">Contact Me</a>
       </div>
-      
+
       <div class="copyright">
         <p>&copy; 2025 Sourav Das. All rights reserved.</p>
       </div>
@@ -573,9 +763,9 @@
     <script>
       // Smooth scroll to API documentation
       function scrollToApiDocs() {
-        document.getElementById('movieflix-api-docs').scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+        document.getElementById("movieflix-api-docs").scrollIntoView({
+          behavior: "smooth",
+          block: "start",
         });
       }
     </script>
