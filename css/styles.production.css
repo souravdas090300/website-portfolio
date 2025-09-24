@@ -241,7 +241,6 @@ form > * {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
   backdrop-filter: blur(10px) !important;
   text-transform: uppercase !important;
   letter-spacing: 1px !important;
@@ -278,7 +277,6 @@ form > * {
   background: linear-gradient(135deg, #0052cc, #003d99) !important;
   border-color: rgba(0, 82, 204, 0.8) !important;
   color: #ffffff !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9) !important;
 }
 
 .animated-button#button1:hover {
@@ -784,24 +782,83 @@ footer {
    COMPREHENSIVE MOBILE RESPONSIVENESS
    ======================================== */
 
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  z-index: 1000;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: #357b70;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 /* Mobile Header & Navigation */
 @media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
   .page-header {
-    flex-direction: column;
-    padding: 15px 10px;
-    gap: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
   }
 
   #header-img {
-    max-width: 150px;
+    max-width: 120px;
     height: auto;
+  }
+
+  .main-navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+
+  .main-navigation.nav-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .navigation-list {
     flex-direction: column;
-    gap: 10px;
+    gap: 0;
     width: 100%;
     text-align: center;
+    margin: 0;
+    padding: 10px 0;
   }
 
   .navigation-list__item {
@@ -1037,6 +1094,31 @@ footer {
   }
 }
 
+/* =============================================
+   Global Font Override: Calibri with fallbacks
+   Applies across the site; uses !important to
+   ensure it takes precedence over prior rules.
+   ============================================= */
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: Calibri, "Segoe UI", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Calibri, "Segoe UI", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif !important;
+}
+
 /* Extra Small Mobile (480px and below) */
 @media (max-width: 480px) {
   .page-header {
@@ -1172,7 +1254,6 @@ p {
   font-weight: 400 !important;
   line-height: 1.7 !important;
   margin-bottom: 15px !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
 }
 
 /* All headings - gradient text with fallback */
@@ -1195,7 +1276,6 @@ h6 {
 /* Specific heading overrides for better visibility */
 h1 {
   font-size: 2.5em !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
 }
 
 h2 {
@@ -1465,7 +1545,6 @@ footer a:hover,
   background: linear-gradient(135deg, #4caf50, #45a049) !important;
   padding: 12px 15px 12px 15px !important;
   border-radius: 8px !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
   box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3) !important;
 }
 
@@ -1600,7 +1679,6 @@ h6 {
 .page-header h1 {
   font-size: 3.5em !important;
   margin-bottom: 15px !important;
-  text-shadow: 0 0 20px rgba(97, 218, 251, 0.5) !important;
 }
 
 /* Enhanced Grid Layout */
@@ -1659,7 +1737,6 @@ h6 {
   background: rgba(255, 255, 255, 0.4) !important;
   padding: 12px !important;
   border-radius: 8px !important;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8) !important;
 }
 
 /* Enhanced Project Goal */
@@ -1789,7 +1866,6 @@ h6 {
   background: rgba(255, 255, 255, 0.4) !important;
   padding: 10px 15px !important;
   border-radius: 8px !important;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8) !important;
 }
 
 /* Tech stack headings */
@@ -1841,7 +1917,6 @@ h6 {
   line-height: 1.6 !important;
   margin-bottom: 15px !important;
   font-weight: 500 !important;
-  text-shadow: none !important;
   font-size: 1.05em !important;
   background: rgba(255, 255, 255, 0.2) !important;
   padding: 8px 12px !important;
@@ -1854,7 +1929,6 @@ h6 {
   font-size: 1.1em !important;
   line-height: 1.7 !important;
   font-weight: 500 !important;
-  text-shadow: none !important;
   letter-spacing: 0.01em !important;
   margin-bottom: 18px !important;
   padding: 0 5px !important;
@@ -1901,7 +1975,6 @@ h6 {
 [data-page="work"] .grid__item:hover h2 {
   background: rgba(255, 255, 255, 0.2) !important;
   color: white !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
 }
 
 [data-page="work"] .grid__item:hover h4 {
@@ -2154,7 +2227,6 @@ footer h1 {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
-  text-shadow: none !important;
 }
 
 .work-subtitle {
@@ -2315,7 +2387,6 @@ footer h1 {
   h4,
   h5,
   h6 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
   }
 
   .grid__item {
@@ -2374,7 +2445,6 @@ h6 {
   background-clip: text !important;
   font-weight: 700 !important;
   margin-bottom: 20px !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Paragraphs - High Visibility */
@@ -2384,7 +2454,6 @@ p {
   font-weight: 400 !important;
   line-height: 1.7 !important;
   margin-bottom: 16px !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* Modern Navigation */
@@ -2901,7 +2970,6 @@ h6 {
   font-weight: 800 !important;
   margin-bottom: 25px !important;
   position: relative;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7) !important;
   /* Remove background-clip to ensure solid colors */
   background: none !important;
   -webkit-background-clip: unset !important;
@@ -2938,7 +3006,6 @@ p {
   font-weight: 400 !important;
   line-height: 1.8 !important;
   margin-bottom: 20px !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
   letter-spacing: 0.01em !important;
 }
 
@@ -2953,7 +3020,6 @@ a {
 
 a:hover {
   color: #a8edea !important;
-  text-shadow: 0 0 10px rgba(100, 255, 218, 0.5) !important;
 }
 
 /* Ultra-Modern Navigation */
@@ -2992,7 +3058,6 @@ a:hover {
   font-size: 1.05em !important;
   position: relative;
   overflow: hidden;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
 }
 
 .navigation-list__item a::before {
@@ -3021,7 +3086,6 @@ a:hover {
   color: #0a0a23 !important;
   transform: translateY(-3px) scale(1.02) !important;
   box-shadow: 0 12px 30px rgba(100, 255, 218, 0.4), 0 4px 8px rgba(0, 0, 0, 0.2) !important;
-  text-shadow: none !important;
 }
 
 /* Ultra-Enhanced Grid System */
@@ -3135,7 +3199,6 @@ a:hover {
   color: #64ffda !important;
   font-size: 1.2em !important;
   font-weight: 700 !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
 }
 
 .project-goal p {
@@ -3230,7 +3293,6 @@ a:hover {
   position: relative;
   overflow: hidden;
   font-size: 1em !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
   border: 2px solid transparent !important;
 }
 
@@ -3280,7 +3342,6 @@ label,
   color: #f8fafc !important;
   font-weight: 600 !important;
   font-size: 1.1em !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
   margin-bottom: 8px !important;
   display: block !important;
 }
@@ -3305,7 +3366,6 @@ select {
   box-sizing: border-box !important;
   backdrop-filter: blur(10px) !important;
   transition: all 0.3s ease !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
 }
 
 input:focus,
@@ -3380,7 +3440,6 @@ input[type="submit"]:hover {
 li {
   color: #f8fafc !important;
   margin-bottom: 12px !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
   line-height: 1.6 !important;
 }
 
@@ -3439,7 +3498,6 @@ td,
 th {
   color: #f8fafc !important;
   border: 1px solid rgba(100, 255, 218, 0.3) !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
 }
 
 th {
@@ -3631,7 +3689,6 @@ td {
   color: #64ffda !important;
   font-family: "JetBrains Mono", "Courier New", monospace !important;
   font-size: 0.95em !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
 .api-features {
@@ -3887,7 +3944,6 @@ h6 {
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
   font-weight: 800 !important;
-  text-shadow: none !important;
 }
 
 /* Force paragraph visibility */
@@ -3898,7 +3954,6 @@ li,
 td,
 th {
   color: #f8fafc !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Links with high visibility */
@@ -3906,12 +3961,10 @@ a {
   color: #64ffda !important;
   text-decoration: none !important;
   transition: all 0.3s ease !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
 a:hover {
   color: #a8edea !important;
-  text-shadow: 0 0 15px rgba(100, 255, 218, 0.5) !important;
 }
 
 /* Form elements visibility */
@@ -3933,7 +3986,6 @@ textarea::placeholder {
 label {
   color: #f8fafc !important;
   font-weight: 600 !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* ========================================== */
@@ -3996,7 +4048,6 @@ footer h1,
   margin-bottom: 35px !important;
   position: relative;
   z-index: 2;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7) !important;
   /* Remove background-clip to ensure solid color */
   background: none !important;
   -webkit-background-clip: unset !important;
@@ -4088,7 +4139,6 @@ footer div a,
   transition: all 0.3s ease !important;
   position: relative;
   overflow: hidden;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
 footer div a::before,
@@ -4124,7 +4174,6 @@ footer div a:hover,
   ) !important;
   transform: translateY(-3px) !important;
   box-shadow: 0 8px 25px rgba(100, 255, 218, 0.3) !important;
-  text-shadow: 0 0 15px rgba(100, 255, 218, 0.5) !important;
 }
 
 /* Footer copyright text */
@@ -4242,7 +4291,6 @@ footer .copyright,
   color: #f8fafc !important;
   font-size: 1.1em !important;
   line-height: 1.8 !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) !important;
   margin-bottom: 20px !important;
 }
 
@@ -4253,7 +4301,6 @@ footer .copyright,
 
 #about-main a:hover {
   color: #a8edea !important;
-  text-shadow: 0 0 15px rgba(100, 255, 218, 0.5) !important;
 }
 
 /* Table content visibility */
@@ -4270,7 +4317,6 @@ th {
   ) !important;
   color: #64ffda !important;
   font-weight: 700 !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
 td {
@@ -4320,7 +4366,6 @@ button,
 input[type="submit"] {
   color: #ffffff !important;
   font-weight: 600 !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* SVG icon fixes - exclude Berlin illustration */
@@ -4375,7 +4420,6 @@ svg:not(.berlin-illustration) * {
 .standard-label {
   color: #f8fafc !important;
   font-weight: 600 !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* ========================================== */
@@ -4549,7 +4593,6 @@ svg:not(.berlin-illustration) * {
   color: #2c3e50 !important;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3) !important;
 }
 
 .skill-category h4::after {
@@ -4627,20 +4670,17 @@ svg:not(.berlin-illustration) * {
   font-weight: 700 !important;
   font-family: "JetBrains Mono", "Fira Code", "Consolas", monospace !important;
   font-size: 1.1em !important;
-  text-shadow: none !important;
   letter-spacing: 0.5px;
 }
 
 /* Override strong text color specifically on hover */
 .skill-category li:hover strong {
   color: white !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
 }
 
 /* Strong text in hover state */
 .skill-category li:hover strong {
   color: white !important;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
   background: none !important;
 }
 
@@ -4656,7 +4696,6 @@ svg:not(.berlin-illustration) * {
 .skill-category li:hover::before {
   color: white !important;
   transform: translateX(8px) scale(1.2);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* ULTIMATE HOVER TEXT COLOR FIX - Override any conflicting styles */
@@ -4669,7 +4708,6 @@ svg:not(.berlin-illustration) * {
 .skill-category ul li:hover span,
 .skill-category ul li:hover strong {
   color: white !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* Additional ultra-specific override for any remaining green text */
@@ -4678,7 +4716,6 @@ svg:not(.berlin-illustration) * {
 .skill-category li:hover *:not(.skill-category),
 .skill-category li:hover strong:not(.skill-category) {
   color: white !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7) !important;
 }
 
 /* NUCLEAR OPTION - Force all text to be white on hover */
@@ -4689,7 +4726,6 @@ svg:not(.berlin-illustration) * {
 .skill-category li:hover p,
 .skill-category li:hover *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   color: white !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
 }
 
 /* ULTIMATE LAST RESORT - Maximum specificity for skill category hover */
@@ -4700,7 +4736,6 @@ html body div .skill-category li:hover,
 html body div .skill-category li:hover *,
 html body div .skill-category li:hover strong {
   color: #ffffff !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9) !important;
 }
 
 /* CV Download Buttons Container */
@@ -4755,7 +4790,6 @@ html body div .skill-category li:hover strong {
   color: #3366ff !important;
   text-transform: uppercase;
   letter-spacing: 3px;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 2;
 }
@@ -4764,7 +4798,6 @@ html body div .skill-category li:hover strong {
   color: #f8fafc !important;
   font-size: 1.2em;
   margin-bottom: 40px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   position: relative;
   z-index: 2;
 }
@@ -5039,7 +5072,6 @@ html body div .skill-category li:hover strong {
   font-weight: 600;
   border: 1px solid rgba(100, 255, 218, 0.3);
   font-family: "JetBrains Mono", monospace;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .project-link-highlight {
@@ -5052,7 +5084,6 @@ html body div .skill-category li:hover strong {
   font-weight: 700 !important;
   margin-top: 20px;
   transition: all 0.3s ease;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
   border: 2px solid rgba(100, 255, 218, 0.5);
   box-shadow: 0 6px 20px rgba(100, 255, 218, 0.3);
   font-size: 1.05em !important;
@@ -5063,7 +5094,6 @@ html body div .skill-category li:hover strong {
   box-shadow: 0 10px 25px rgba(100, 255, 218, 0.4);
   background: linear-gradient(135deg, #a8edea, #fed6e3);
   color: #ffffff !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9) !important;
   border-color: rgba(168, 237, 234, 0.7);
 }
 
@@ -5126,7 +5156,6 @@ html body div .skill-category li:hover strong {
   border: 1px solid rgba(100, 255, 218, 0.3) !important;
   transition: all 0.3s ease !important;
   backdrop-filter: blur(10px) !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
   position: relative;
   overflow: hidden;
 }
@@ -5186,7 +5215,6 @@ html body div .skill-category li:hover strong {
   border: 2px solid rgba(100, 255, 218, 0.3) !important;
   transition: all 0.3s ease !important;
   backdrop-filter: blur(10px) !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
   position: relative;
   overflow: hidden;
 }
@@ -5629,7 +5657,6 @@ footer h1,
   -webkit-text-fill-color: unset !important;
   background-clip: unset !important;
   color: #ffffff !important;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8) !important;
 }
 
 /* Specific heading colors for hierarchy */
@@ -5661,7 +5688,6 @@ th,
 label,
 .standard-label {
   color: #ffffff !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
   font-weight: 500 !important;
 }
 
@@ -5683,13 +5709,11 @@ textarea::placeholder {
 /* High contrast links */
 a {
   color: #64ffda !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
   font-weight: 600 !important;
 }
 
 a:hover {
   color: #a8edea !important;
-  text-shadow: 0 0 10px rgba(100, 255, 218, 0.8) !important;
 }
 
 /* Ensure buttons are visible */
@@ -5700,7 +5724,6 @@ input[type="submit"] {
   color: #000000 !important;
   border: 2px solid #ffffff !important;
   font-weight: 700 !important;
-  text-shadow: none !important;
 }
 
 button:hover {
@@ -5718,25 +5741,21 @@ th {
   background: rgba(100, 255, 218, 0.3) !important;
   color: #ffffff !important;
   font-weight: 700 !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
 }
 
 td {
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   color: #ffffff !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* Navigation links */
 .navigation-list__item a {
   color: #ffffff !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
   font-weight: 600 !important;
 }
 
 .navigation-list__item a:hover {
   color: #64ffda !important;
-  text-shadow: 0 0 10px rgba(100, 255, 218, 0.8) !important;
 }
 
 /* Project cards text */
@@ -5744,32 +5763,27 @@ td {
 .grid__item h3,
 .grid__item h4 {
   color: #64ffda !important;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8) !important;
 }
 
 .grid__item p {
   color: #ffffff !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
 }
 
 /* API Documentation text */
 .api-documentation h4,
 .api-documentation h5 {
   color: #64ffda !important;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8) !important;
 }
 
 .api-documentation p,
 .api-documentation li {
   color: #ffffff !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
 }
 
 /* Ensure copyright text is visible */
 .copyright,
 .copyright p {
   color: #ffffff !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
 }
 
 /* Force visibility for any remaining elements */
@@ -6302,13 +6316,11 @@ html body .skills-section .skill-category ul li *,
 html body .skills-section .skill-category li,
 html body .skills-section .skill-category li * {
   color: #27ae60 !important;
-  text-shadow: none !important;
 }
 
 html body .skills-section .skill-category ul li strong,
 html body .skills-section .skill-category li strong {
   color: #2ecc71 !important;
-  text-shadow: none !important;
 }
 
 /* Force override any inherited styles */
@@ -6389,7 +6401,6 @@ table th *,
 th,
 th * {
   color: #ffffff !important;
-  text-shadow: none !important;
 }
 
 html body table th,
@@ -6403,7 +6414,6 @@ html body table th * {
 .featured-project .project-link-highlight,
 .featured-project .project-link-highlight * {
   color: #ffffff !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
 }
 
 .project-link-highlight:hover,
@@ -6411,7 +6421,6 @@ html body table th * {
 .featured-project .project-link-highlight:hover,
 .featured-project .project-link-highlight:hover * {
   color: #ffffff !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9) !important;
 }
 
 /* ULTIMATE NUCLEAR OPTION - FORCE ALL TEXT TO GREEN */
@@ -6454,7 +6463,6 @@ th strong {
 
 /* CRYSTAL CLEAR TEXT - REMOVE ALL BLUR AND SHADOWS */
 * {
-  text-shadow: none !important;
   filter: none !important;
   -webkit-filter: none !important;
   text-rendering: optimizeLegibility !important;
@@ -6479,7 +6487,6 @@ table {
 table td,
 table th,
 table * {
-  text-shadow: none !important;
   filter: none !important;
   -webkit-filter: none !important;
   font-weight: 500 !important;
