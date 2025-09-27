@@ -73,8 +73,9 @@
       <h1>Get in touch</h1>
       <img
         src="img/sourav.jpg"
-        class="profile__portrait"
+        class="profile__portrait animated-entrance"
         alt="Sourav Das Portrait"
+        id="profile-image"
       />
       <form action="contact.html" method="post" id="index-contact-form">
         <label class="standard-label" for="email">Email: </label>
@@ -121,5 +122,60 @@
 
     <script src="js/tota11y.min.js"></script>
     <script src="js/mobile-menu.js"></script>
+
+    <!-- Profile Image Animation Styles -->
+    <style>
+      .animated-entrance {
+        opacity: 0;
+        transform: scale(0);
+        transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .animated-entrance.visible {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      /* Additional animation effects */
+      .profile__portrait {
+        border-radius: 50%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+      }
+
+      .profile__portrait:hover {
+        transform: scale(1.05);
+      }
+    </style>
+
+    <!-- Profile Image Animation Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const profileImage = document.getElementById("profile-image");
+
+        // Add entrance animation after a short delay
+        setTimeout(() => {
+          profileImage.classList.add("visible");
+        }, 500); // 500ms delay for dramatic effect
+
+        // Optional: Add animation on scroll if image is not initially visible
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -100px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        // Observe the image for scroll-triggered animation
+        observer.observe(profileImage);
+      });
+    </script>
   </body>
 </html>
