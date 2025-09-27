@@ -12,6 +12,23 @@ body {
   color: #00008b;
 }
 
+/* Mobile Body Fixes */
+@media (max-width: 768px) {
+  body {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    overflow-x: hidden !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px !important;
+  }
+}
+
 h1 {
   font-weight: 400;
   color: #fff;
@@ -112,10 +129,45 @@ main {
   margin: auto;
 }
 
+/* Mobile Main Container Fixes */
+@media (max-width: 768px) {
+  main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 5px !important;
+  }
+}
+
 #index-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+/* Mobile Fix for Index Main - Override flex to prevent layout issues */
+@media (max-width: 768px) {
+  #index-main {
+    display: block !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 20px 15px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #index-main {
+    padding: 15px 10px !important;
+  }
 }
 
 .profile__portrait {
@@ -128,12 +180,100 @@ main {
   border-radius: 50%;
 }
 
+/* Mobile Profile Portrait Fixes */
+@media (max-width: 768px) {
+  .profile__portrait {
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0 auto 20px auto !important;
+    display: block !important;
+    flex: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile__portrait {
+    width: 160px !important;
+    height: 160px !important;
+    margin: 0 auto 15px auto !important;
+  }
+}
+
 #index-contact-form {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   width: 100%;
   margin-bottom: 15px;
+}
+
+/* Mobile Contact Form Fixes */
+@media (max-width: 768px) {
+  #index-contact-form {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    margin: 20px auto !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 10px !important;
+    backdrop-filter: blur(10px) !important;
+  }
+
+  #index-contact-form label {
+    display: block !important;
+    margin-bottom: 8px !important;
+    color: #fff !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+  }
+
+  #index-contact-form input {
+    width: 100% !important;
+    padding: 12px !important;
+    margin-bottom: 15px !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    box-sizing: border-box !important;
+    font-size: 16px !important;
+  }
+
+  #index-contact-form button {
+    width: 100% !important;
+    padding: 15px !important;
+    background: linear-gradient(145deg, #357b70, #2b6259) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+  }
+
+  #index-contact-form button:hover {
+    background: linear-gradient(145deg, #2b6259, #1f4a42) !important;
+    transform: translateY(-2px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #index-contact-form {
+    padding: 15px !important;
+    margin: 15px auto !important;
+  }
+
+  #index-contact-form input {
+    padding: 10px !important;
+    font-size: 14px !important;
+  }
+
+  #index-contact-form button {
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
 }
 
 #index-contact-form > h1 {
@@ -1385,6 +1525,30 @@ input[type="submit"]:hover {
   font-size: 3em !important;
 }
 
+/* Mobile heading fixes for index page */
+@media (max-width: 768px) {
+  #index-main h1 {
+    font-size: 2.2em !important;
+    margin-bottom: 20px !important;
+    padding: 0 10px !important;
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #index-main h1 {
+    font-size: 1.8em !important;
+    margin-bottom: 15px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  #index-main h1 {
+    font-size: 1.5em !important;
+  }
+}
+
 #index-contact-form > h1 {
   color: #ffffff !important;
 }
@@ -2387,6 +2551,8 @@ footer h1 {
   h4,
   h5,
   h6 {
+    color: #ffffff !important;
+    font-weight: bold !important;
   }
 
   .grid__item {
