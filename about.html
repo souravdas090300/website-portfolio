@@ -70,22 +70,475 @@
     </header>
 
     <main id="about-main">
-      <h2>About Me</h2>
-      <p>
-        Hello World! My name is Sourav Das, a passionate Full-Stack Developer
-        with expertise in modern web and mobile technologies. Welcome to my
-        portfolio website where I showcase my journey from HTML/CSS fundamentals
-        to building enterprise-level applications.
-      </p>
+      <!-- dasdev Image Section - Clean Full Aspect View -->
+      <section
+        class="dasdev-header-section"
+        style="
+          width: 100%;
+          height: 100vh;
+          background: url('img/dasdev.png');
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+          margin: 0;
+          background-color: #1a1a1a;
+        "
+      ></section>
 
-      <h3>My Development Journey</h3>
-      <p>
-        Through my comprehensive projects, I've mastered the complete
-        development stack, from frontend user interfaces to backend APIs and
-        mobile applications. My portfolio demonstrates proficiency across 12+
-        repositories, showcasing real-world applications with modern
-        technologies and best practices.
-      </p>
+      <!-- About Content Section - Full Width Below Profile -->
+      <section
+        class="about-content-section"
+        style="
+          padding: 80px 20px;
+          background: linear-gradient(135deg, #2c3e50, #34495e);
+          text-align: center;
+          color: white;
+        "
+      >
+        <div
+          class="content-container"
+          style="max-width: 1200px; margin: 0 auto; text-align: left"
+        >
+          <div class="about-content" style="width: 100%; padding: 0">
+            <!-- Profile Image with Floating Tech Icons - Integrated in About Container -->
+            <div style="text-align: center; margin-bottom: 50px">
+              <div
+                class="profile-image-wrapper"
+                style="position: relative; display: inline-block; margin: 20px"
+              >
+                <img
+                  src="img/sourav.jpg"
+                  alt="Sourav Das"
+                  style="
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 50%;
+                    border: 5px solid #ecf0f1;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                    object-fit: cover;
+                  "
+                />
+
+                <!-- Floating Tech Icons -->
+                <div class="floating-icons">
+                  <!-- React Icon -->
+                  <div
+                    class="tech-icon"
+                    style="
+                      position: absolute;
+                      top: 15px;
+                      right: -5px;
+                      width: 50px;
+                      height: 50px;
+                      background: linear-gradient(135deg, #61dafb, #21759b);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 1.5rem;
+                      color: white;
+                      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                      animation: float 3s ease-in-out infinite;
+                      z-index: 10;
+                    "
+                  >
+                    ⚛️
+                  </div>
+
+                  <!-- JavaScript Icon -->
+                  <div
+                    class="tech-icon"
+                    style="
+                      position: absolute;
+                      top: 80px;
+                      left: -15px;
+                      width: 45px;
+                      height: 45px;
+                      background: linear-gradient(135deg, #f7df1e, #e6c200);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 1.2rem;
+                      color: black;
+                      font-weight: bold;
+                      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                      animation: float 3s ease-in-out infinite 0.5s;
+                      z-index: 10;
+                    "
+                  >
+                    JS
+                  </div>
+
+                  <!-- Node.js Icon -->
+                  <div
+                    class="tech-icon"
+                    style="
+                      position: absolute;
+                      bottom: 70px;
+                      right: -25px;
+                      width: 48px;
+                      height: 48px;
+                      background: linear-gradient(135deg, #68a063, #4f7942);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 1.4rem;
+                      color: white;
+                      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                      animation: float 3s ease-in-out infinite 1s;
+                      z-index: 10;
+                    "
+                  >
+                    🟢
+                  </div>
+
+                  <!-- MongoDB Icon -->
+                  <div
+                    class="tech-icon"
+                    style="
+                      position: absolute;
+                      bottom: 15px;
+                      left: -10px;
+                      width: 42px;
+                      height: 42px;
+                      background: linear-gradient(135deg, #4db33d, #3e8e2e);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 1.1rem;
+                      color: white;
+                      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                      animation: float 3s ease-in-out infinite 1.5s;
+                      z-index: 10;
+                    "
+                  >
+                    🍃
+                  </div>
+
+                  <!-- AWS Icon -->
+                  <div
+                    class="tech-icon"
+                    style="
+                      position: absolute;
+                      top: 40px;
+                      left: -30px;
+                      width: 46px;
+                      height: 46px;
+                      background: linear-gradient(135deg, #ff9900, #e6850e);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 1.3rem;
+                      color: white;
+                      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                      animation: float 3s ease-in-out infinite 2s;
+                      z-index: 10;
+                    "
+                  >
+                    ☁️
+                  </div>
+
+                  <!-- Python Icon -->
+                  <div
+                    class="tech-icon"
+                    style="
+                      position: absolute;
+                      bottom: 100px;
+                      left: 15px;
+                      width: 44px;
+                      height: 44px;
+                      background: linear-gradient(135deg, #3776ab, #2d5d8b);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 1.2rem;
+                      color: white;
+                      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                      animation: float 3s ease-in-out infinite 2.5s;
+                      z-index: 10;
+                    "
+                  >
+                    🐍
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h1
+              style="
+                color: #ecf0f1;
+                font-size: 3rem;
+                margin-bottom: 20px;
+                text-align: center;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                font-weight: bold;
+              "
+            >
+              About Me
+            </h1>
+
+            <!-- Welcome Text Below About Me -->
+            <div style="text-align: center; margin-bottom: 40px">
+              <h2
+                style="
+                  color: #3498db;
+                  font-size: 2.2rem;
+                  margin-bottom: 15px;
+                  font-weight: bold;
+                "
+              >
+                Welcome to My Portfolio
+              </h2>
+              <p
+                style="
+                  color: #bdc3c7;
+                  font-size: 1.4rem;
+                  margin: 0;
+                  font-style: italic;
+                "
+              >
+                Discover my journey as a Full-Stack Developer
+              </p>
+            </div>
+
+            <div
+              class="about-article"
+              style="
+                font-size: 1.2rem;
+                line-height: 1.9;
+                color: #ecf0f1;
+                padding: 40px;
+                background: rgba(52, 73, 94, 0.8);
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                border: 1px solid rgba(236, 240, 241, 0.2);
+              "
+            >
+              <p
+                style="
+                  margin-bottom: 1.5rem;
+                  font-size: 1.3rem;
+                  color: #3498db;
+                  font-weight: bold;
+                "
+              >
+                <strong>Hello World! I'm Sourav Das</strong>
+              </p>
+
+              <p style="margin-bottom: 2rem; color: #bdc3c7">
+                I'm a passionate Full-Stack Developer with a unique background
+                that shapes how I build software. Based in Hamrun, Malta, I
+                specialize in creating end-to-end solutions with modern
+                technologies like JavaScript, React, Angular, Node.js, Express,
+                MongoDB, and AWS.
+              </p>
+
+              <h3
+                style="
+                  color: #e74c3c;
+                  margin-bottom: 1rem;
+                  font-size: 1.5rem;
+                  font-weight: bold;
+                "
+              >
+                From Operations to Tech World Journey
+              </h3>
+              <p style="margin-bottom: 2rem; color: #bdc3c7">
+                My professional journey began in networking, storekeeping, and
+                front-office roles. These positions taught me invaluable lessons
+                in troubleshooting under pressure, clear communication, and
+                understanding how systems work together in the real world. I
+                transitioned into development because I wanted to build the
+                tools that power these operations, driven by a passion for
+                solving complex problems from start to finish.
+              </p>
+
+              <h3
+                style="
+                  color: #e74c3c;
+                  margin-bottom: 1rem;
+                  font-size: 1.5rem;
+                  font-weight: bold;
+                "
+              >
+                What I Bring to the Table
+              </h3>
+              <p style="margin-bottom: 2rem; color: #bdc3c7">
+                I don't just write code; I build applications with a focus on
+                the user. My portfolio features over 12 repositories, including
+                a Progressive Web App (PWA) with OAuth and a movie discovery
+                platform, all demonstrating my commitment to performance,
+                accessibility, and clean architecture. I am skilled in the
+                complete development lifecycle—from ideation and UI/UX design to
+                deployment and maintenance on cloud platforms.
+              </p>
+
+              <p
+                style="
+                  font-weight: bold;
+                  color: #f39c12;
+                  font-size: 1.3rem;
+                  text-align: center;
+                  margin-top: 2rem;
+                  padding: 25px;
+                  background: rgba(243, 156, 18, 0.15);
+                  border-radius: 12px;
+                  border: 2px solid rgba(243, 156, 18, 0.4);
+                  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                "
+              >
+                I am seeking a full-stack role where I can apply my unique blend
+                of operational wisdom and technical skill to help build
+                scalable, meaningful products.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Floating Animation Styles -->
+      <style>
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+
+        .tech-icon:hover {
+          transform: scale(1.1) !important;
+          transition: transform 0.3s ease;
+        }
+
+        /* Action Button Hover Effects */
+        .action-btn:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .download-btn:hover {
+          background: linear-gradient(135deg, #c0392b, #a93226);
+          box-shadow: 0 12px 35px rgba(231, 76, 60, 0.6);
+        }
+
+        .work-btn:hover {
+          background: linear-gradient(135deg, #2980b9, #21618c);
+          box-shadow: 0 12px 35px rgba(52, 152, 219, 0.6);
+        }
+
+        .contact-btn:hover {
+          background: linear-gradient(135deg, #229954, #1e8449);
+          box-shadow: 0 12px 35px rgba(39, 174, 96, 0.6);
+        }
+
+        @media (max-width: 768px) {
+          .dasdev-header-section {
+            height: 70vh !important;
+            min-height: 400px !important;
+            background-size: contain !important;
+          }
+
+          .profile-image-wrapper img {
+            width: 200px !important;
+            height: 200px !important;
+          }
+
+          .about-content h1 {
+            font-size: 2.2rem !important;
+          }
+
+          .about-content h2 {
+            font-size: 1.8rem !important;
+          }
+
+          .about-content p {
+            font-size: 1.2rem !important;
+          }
+
+          .about-article {
+            padding: 25px !important;
+            font-size: 1.1rem !important;
+          }
+
+          .tech-icon {
+            width: 35px !important;
+            height: 35px !important;
+            font-size: 1rem !important;
+          }
+
+          .action-buttons {
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 15px !important;
+          }
+
+          .action-btn {
+            width: 100% !important;
+            max-width: 280px !important;
+            justify-content: center !important;
+            padding: 12px 25px !important;
+            font-size: 1rem !important;
+          }
+
+          .floating-icons .tech-icon:nth-child(1) {
+            top: 10px !important;
+            right: -5px !important;
+          }
+          .floating-icons .tech-icon:nth-child(2) {
+            top: 60px !important;
+            left: -10px !important;
+          }
+          .floating-icons .tech-icon:nth-child(3) {
+            bottom: 50px !important;
+            right: -15px !important;
+          }
+          .floating-icons .tech-icon:nth-child(4) {
+            bottom: 10px !important;
+            left: -5px !important;
+          }
+          .floating-icons .tech-icon:nth-child(5) {
+            top: 30px !important;
+            left: -20px !important;
+          }
+          .floating-icons .tech-icon:nth-child(6) {
+            bottom: 80px !important;
+            left: 10px !important;
+          }
+
+          .floating-icons .tech-icon:nth-child(1) {
+            top: 10px !important;
+            right: -5px !important;
+          }
+          .floating-icons .tech-icon:nth-child(2) {
+            top: 60px !important;
+            left: -10px !important;
+          }
+          .floating-icons .tech-icon:nth-child(3) {
+            bottom: 60px !important;
+            right: -15px !important;
+          }
+          .floating-icons .tech-icon:nth-child(4) {
+            bottom: 10px !important;
+            left: -5px !important;
+          }
+          .floating-icons .tech-icon:nth-child(5) {
+            top: 30px !important;
+            left: -20px !important;
+          }
+          .floating-icons .tech-icon:nth-child(6) {
+            bottom: 100px !important;
+            left: 10px !important;
+          }
+        }
+      </style>
 
       <h3 style="color: #4caf50">Technical Expertise</h3>
       <div class="skills-section">
@@ -309,28 +762,17 @@
         </p>
         <div class="cv-buttons-container">
           <a
-            href="files/cv-sourav-das.pdf"
-            target="_blank"
+            href="img/Das-Sourav-Resume.pdf"
+            download="Sourav_Das_Resume.pdf"
             class="animated-button"
             id="button1"
-            download
             >Download My CV</a
           >
-          <a
-            href="files/cv-sourav-das.pdf"
-            target="_blank"
-            class="animated-button"
-            id="button2"
-            download
-            >Download My CV</a
+          <a href="work.html" class="animated-button" id="button2"
+            >View My Work</a
           >
-          <a
-            href="files/cv-sourav-das.pdf"
-            target="_blank"
-            class="animated-button"
-            id="button3"
-            download
-            >Download My CV</a
+          <a href="contact.html" class="animated-button" id="button3"
+            >Get In Touch</a
           >
         </div>
       </div>
