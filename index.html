@@ -125,49 +125,189 @@
 
     <!-- Profile Image Animation Styles -->
     <style>
-      .animated-entrance {
-        opacity: 0;
-        transform: scale(0);
-        transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      /* Force initial invisible state - very important for proper animation */
+      .profile__portrait.animated-entrance {
+        opacity: 0 !important;
+        transform: scale(0) translateY(50px) rotateY(180deg) !important;
+        visibility: hidden !important;
+        filter: blur(8px) brightness(0.5) !important;
+        transition: none !important; /* Remove transition initially */
+        pointer-events: none !important;
       }
 
-      .animated-entrance.visible {
-        opacity: 1;
-        transform: scale(1);
+      /* Enable transition after initial setup */
+      .profile__portrait.animated-entrance.transition-enabled {
+        transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        pointer-events: auto !important;
       }
 
-      /* Additional animation effects */
+      /* Visible full-size state */
+      .profile__portrait.animated-entrance.visible {
+        opacity: 1 !important;
+        transform: scale(1) translateY(0) rotateY(0deg) !important;
+        visibility: visible !important;
+        filter: blur(0px) brightness(1) !important;
+      }
+
+      /* Profile portrait base styling */
       .profile__portrait {
-        border-radius: 50%;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease;
+        border-radius: 50% !important;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
+        max-width: 280px !important;
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 30px auto !important;
+        position: relative !important;
+        z-index: 1 !important;
       }
 
-      .profile__portrait:hover {
-        transform: scale(1.05);
+      /* Enhanced hover effect for interactive feel */
+      .profile__portrait.visible:hover {
+        transform: scale(1.08) translateY(-5px) !important;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6) !important;
+        transition: transform 0.4s ease, box-shadow 0.4s ease !important;
       }
+
+      /* Responsive sizing */
+      @media (max-width: 768px) {
+        .profile__portrait {
+          max-width: 220px !important;
+          margin: 25px auto !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .profile__portrait {
+          max-width: 180px !important;
+          margin: 20px auto !important;
+        }
+
+        .profile__portrait.animated-entrance.transition-enabled {
+          transition: all 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        }
+      }
+
+      /* Additional entrance animation for dramatic effect */
+      .profile__portrait.entrance-complete {
+        animation: welcomePulse 2.5s ease-in-out !important;
+      }
+
+      @keyframes welcomePulse {
+        0%, 100% {
+          transform: scale(1) translateY(0);
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        25% {
+          transform: scale(1.03) translateY(-2px);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+        50% {
+          transform: scale(1.01) translateY(-1px);
+          box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+        }
+        75% {
+          transform: scale(1.02) translateY(-1px);
+          box-shadow: 0 19px 48px rgba(0, 0, 0, 0.48);
+        }
+      }
+
+      /* Loading state indicator */
+      .profile__portrait.animated-entrance::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        border: 2px solid rgba(255,255,255,0.3);
+        border-top: 2px solid #fff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        transform: translate(-50%, -50%);
+        opacity: 0.7;
+      }
+
+      .profile__portrait.animated-entrance.visible::before {
+        display: none;
+      }
+
+      @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+      }
+    </style>
     </style>
 
     <!-- Profile Image Animation Script -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const profileImage = document.getElementById("profile-image");
+        
+        // Force initial invisible state immediately
+        function setInvisibleState() {
+          profileImage.style.opacity = "0";
+          profileImage.style.transform = "scale(0) translateY(50px) rotateY(180deg)";
+          profileImage.style.visibility = "hidden";
+          profileImage.style.filter = "blur(8px) brightness(0.5)";
+          profileImage.style.transition = "none";
+          profileImage.style.pointerEvents = "none";
+        }
 
-        // Add entrance animation after a short delay
-        setTimeout(() => {
-          profileImage.classList.add("visible");
-        }, 500); // 500ms delay for dramatic effect
+        // Set invisible state immediately
+        setInvisibleState();
 
-        // Optional: Add animation on scroll if image is not initially visible
+        // Function to trigger the entrance animation
+        function triggerEntranceAnimation() {
+          console.log("Starting profile image entrance animation...");
+          
+          // Enable transitions first
+          profileImage.classList.add("transition-enabled");
+          
+          // Small delay to ensure transition is applied
+          setTimeout(() => {
+            // Add visible class for main animation
+            profileImage.classList.add("visible");
+            
+            // Add pulse animation after entrance completes
+            setTimeout(() => {
+              profileImage.classList.add("entrance-complete");
+              console.log("Profile image entrance animation completed!");
+            }, 2000); // Match the transition duration
+          }, 50);
+        }
+
+        // Ensure image is loaded before animation
+        if (profileImage.complete) {
+          // Image already loaded, start animation after delay
+          setTimeout(() => {
+            triggerEntranceAnimation();
+          }, 1000);
+        } else {
+          // Wait for image to load
+          profileImage.onload = function() {
+            setTimeout(() => {
+              triggerEntranceAnimation();
+            }, 1000);
+          };
+          
+          // Fallback in case onload doesn't fire
+          setTimeout(() => {
+            triggerEntranceAnimation();
+          }, 2000);
+        }
+
+        // Intersection Observer for scroll-triggered animation (backup)
         const observerOptions = {
           threshold: 0.1,
-          rootMargin: "0px 0px -100px 0px",
+          rootMargin: "0px 0px -50px 0px",
         };
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
+            if (entry.isIntersecting && !entry.target.classList.contains("visible")) {
+              console.log("Profile image is in view, triggering animation...");
+              triggerEntranceAnimation();
               observer.unobserve(entry.target);
             }
           });
@@ -175,6 +315,17 @@
 
         // Observe the image for scroll-triggered animation
         observer.observe(profileImage);
+
+        // Ultimate fallback: Force animation if nothing else works
+        setTimeout(() => {
+          if (!profileImage.classList.contains("visible")) {
+            console.log("Fallback: Forcing profile image animation...");
+            triggerEntranceAnimation();
+          }
+        }, 3000);
+
+        // Debug: Log current state
+        console.log("Profile image animation setup complete. Image classes:", profileImage.className);
       });
     </script>
   </body>
