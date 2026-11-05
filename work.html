@@ -1445,28 +1445,40 @@
         <!-- SecureShop - ASP.NET Core E-Commerce -->
         <div class="grid__item">
           <h2>SecureShop - Full-Stack E-Commerce Platform</h2>
+          <img
+            src="img/secureshop-homepage.png"
+            alt="SecureShop storefront homepage"
+            style="
+              width: 100%;
+              height: auto;
+              border-radius: 8px;
+              max-height: 200px;
+              object-fit: cover;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            "
+          />
           <div class="project-goal">
             <strong>Goal:</strong> Build a secure, production-ready e-commerce
-            platform with ASP.NET Core 8 following Clean Architecture
+            platform with ASP.NET Core 10 following Clean Architecture
             principles, featuring a customer storefront, admin panel, and
             RESTful API — all in a single host process deployed on Railway.
           </div>
           <p>
-            A production-grade e-commerce application with ASP.NET Core 8 Razor
+            A production-grade e-commerce application with ASP.NET Core 10 Razor
             Pages and Web API, PostgreSQL via Neon, Redis caching via Upstash,
             Stripe payment integration, Google OAuth, JWT authentication, rate
-            limiting, and comprehensive security headers. Includes 319 tests
-            (318 unit + 1 integration) covering domain entities, services,
+            limiting, and comprehensive security headers. Includes 376 unit
+            tests plus 63 integration tests covering domain entities, services,
             controllers, middleware, and validators.
           </p>
           <div class="tech-stack">
             <h4>Technologies Used:</h4>
             <div class="tech-tags">
-              <span class="tech-tag">ASP.NET Core 8</span>
+              <span class="tech-tag">ASP.NET Core 10</span>
               <span class="tech-tag">C#</span>
               <span class="tech-tag">Clean Architecture</span>
               <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Entity Framework Core 8</span>
+              <span class="tech-tag">Entity Framework Core 10</span>
               <span class="tech-tag">Redis</span>
               <span class="tech-tag">JWT Authentication</span>
               <span class="tech-tag">Google OAuth</span>
@@ -1502,8 +1514,13 @@
                 (OWASP Top 10 addressed)
               </li>
               <li>
-                <strong>Testing:</strong> 319 tests — 318 unit + 1 integration —
-                all passing
+                <strong>Testing:</strong> 376 unit tests + 63 integration
+                tests — including payment-lifecycle and stock-concurrency
+                scenarios against real PostgreSQL
+              </li>
+              <li>
+                <strong>Admin 2FA:</strong> Optional TOTP two-factor
+                authentication with recovery codes for the admin panel
               </li>
             </ul>
           </div>
@@ -1515,7 +1532,7 @@
               >📁 View Source Code</a
             >
             <a
-              href="https://secureshop-production-2eac.up.railway.app"
+              href="https://secureshop-production-ff66.up.railway.app"
               target="_blank"
               class="api-link"
               >🚀 Live Demo</a
