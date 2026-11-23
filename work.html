@@ -1303,7 +1303,7 @@
               >📁 View Source Code</a
             >
             <a
-              href="https://web-production-54550.up.railway.app/"
+              href="https://recipe-app-production-91c765d1.up.railway.app/"
               target="_blank"
               class="api-link"
               >🚀 Live Demo</a
@@ -1458,20 +1458,21 @@
             "
           />
           <div class="project-goal">
-            <strong>Goal:</strong> Build a secure e-commerce platform with ASP.NET
-            Core 10 following Clean Architecture principles, featuring a customer
-            storefront, a separately authorised admin area, and a JWT-secured REST
-            API, with a payment lifecycle that stays correct under retries and
-            concurrent orders. Deployed on Railway (Stripe in test mode).
+            <strong>Goal:</strong> Build a secure e-commerce platform with
+            ASP.NET Core 10 following Clean Architecture principles, featuring a
+            customer storefront, a separately authorised admin area, and a
+            JWT-secured REST API, with a payment lifecycle that stays correct
+            under retries and concurrent orders. Deployed on Railway (Stripe in
+            test mode).
           </div>
           <p>
-            A full-stack e-commerce application built with ASP.NET Core 10 Razor Pages
-            and Web API, PostgreSQL via Neon, optional Redis caching, Stripe
-            PaymentIntents with signed webhooks, Google sign-in, JWT authentication,
-            rate limiting, and security headers. Includes 452 automated tests (389
-            unit + 63 integration) covering domain entities, services, controllers,
-            middleware, and validators, plus database-backed tests for payments and
-            stock concurrency.
+            A full-stack e-commerce application built with ASP.NET Core 10 Razor
+            Pages and Web API, PostgreSQL via Neon, optional Redis caching,
+            Stripe PaymentIntents with signed webhooks, Google sign-in, JWT
+            authentication, rate limiting, and security headers. Includes 452
+            automated tests (389 unit + 63 integration) covering domain
+            entities, services, controllers, middleware, and validators, plus
+            database-backed tests for payments and stock concurrency.
           </p>
           <div class="tech-stack">
             <h4>Technologies Used:</h4>
@@ -1497,30 +1498,35 @@
             <h4>Key Features:</h4>
             <ul>
               <li>
-                <strong>Payments:</strong> Signed Stripe webhooks, idempotent event
-                handling, atomic order transitions, and an abandoned-order sweeper
+                <strong>Payments:</strong> Signed Stripe webhooks, idempotent
+                event handling, atomic order transitions, and an abandoned-order
+                sweeper
               </li>
               <li>
                 <strong>Stock integrity:</strong> Atomic conditional
-                <code>UPDATE</code> reservation prevents overselling, proven by a
-                concurrency test against real PostgreSQL
+                <code>UPDATE</code> reservation prevents overselling, proven by
+                a concurrency test against real PostgreSQL
               </li>
               <li>
-                <strong>Security:</strong> Account lockout, rate limiting, security
-                headers, Stripe-aware CSP, antiforgery, anti-enumeration errors
+                <strong>Security:</strong> Account lockout, rate limiting,
+                security headers, Stripe-aware CSP, antiforgery,
+                anti-enumeration errors
               </li>
               <li>
-                <strong>Admin area:</strong> Separate sign-in, cookie scheme, and
-                authorisation, with <code>noindex</code>/<code>no-store</code> headers
+                <strong>Admin area:</strong> Separate sign-in, cookie scheme,
+                and authorisation, with <code>noindex</code>/<code
+                  >no-store</code
+                >
+                headers
               </li>
               <li>
-                <strong>Admin 2FA:</strong> Optional TOTP two-factor authentication
-                with recovery codes for the admin panel
+                <strong>Admin 2FA:</strong> Optional TOTP two-factor
+                authentication with recovery codes for the admin panel
               </li>
               <li>
                 <strong>Testing:</strong> 389 unit tests + 63 integration tests,
-                including payment-lifecycle and stock-concurrency scenarios against
-                real PostgreSQL, run in CI
+                including payment-lifecycle and stock-concurrency scenarios
+                against real PostgreSQL, run in CI
               </li>
             </ul>
           </div>
@@ -1559,20 +1565,22 @@
           />
 
           <div class="project-goal">
-            <strong>Goal:</strong> Build a production-ready full-stack e-commerce
-            application with .NET 10, React 19 + TypeScript, and PostgreSQL 17,
-            featuring idempotent Stripe test-mode payments, stock-conflict recovery
-            (<code>PaymentReview</code>), and an admin operations panel deployed with
-            Docker on an Oracle Cloud VM behind Nginx Proxy Manager and DuckDNS[cite: 1, 2].
+            <strong>Goal:</strong> Build a production-ready full-stack
+            e-commerce application with .NET 10, React 19 + TypeScript, and
+            PostgreSQL 17, featuring idempotent Stripe test-mode payments,
+            stock-conflict recovery (<code>PaymentReview</code>), and an admin
+            operations panel deployed with Docker on an Oracle Cloud VM behind
+            Nginx Proxy Manager and DuckDNS[cite: 1, 2].
           </div>
 
           <p>
             A full-stack e-commerce platform with the <strong>Mercato</strong>
-            storefront, ASP.NET Core 10 minimal APIs, and a React 19 + Vite frontend
-            served via Nginx[cite: 1, 2]. Includes JWT authentication with rotating
-            refresh tokens and Google Identity Services sign-in, Stripe Checkout with
-            signed webhooks, Resend transactional email, rate limiting and account
-            lockout, and unit + Testcontainers integration tests[cite: 1, 2].
+            storefront, ASP.NET Core 10 minimal APIs, and a React 19 + Vite
+            frontend served via Nginx[cite: 1, 2]. Includes JWT authentication
+            with rotating refresh tokens and Google Identity Services sign-in,
+            Stripe Checkout with signed webhooks, Resend transactional email,
+            rate limiting and account lockout, and unit + Testcontainers
+            integration tests[cite: 1, 2].
           </p>
 
           <div class="tech-stack">
@@ -1604,30 +1612,34 @@
               <li>
                 <strong>Storefront &amp; Cart:</strong> Product catalog with
                 categories, images, variants, search, filters and sorting; guest
-                carts that merge into the account on login; saved addresses; Stripe
-                Checkout or Cash on Delivery; order tracking and cancellation.
+                carts that merge into the account on login; saved addresses;
+                Stripe Checkout or Cash on Delivery; order tracking and
+                cancellation.
               </li>
               <li>
-                <strong>Payment &amp; Stock Safety:</strong> Server-created Stripe
-                Checkout sessions, signature-verified webhooks with idempotency,
-                atomic stock decrement, and a <code>PaymentReview</code> flow with
-                admin-visible payment issues when stock conflicts occur[cite: 1, 2].
+                <strong>Payment &amp; Stock Safety:</strong> Server-created
+                Stripe Checkout sessions, signature-verified webhooks with
+                idempotency, atomic stock decrement, and a
+                <code>PaymentReview</code> flow with admin-visible payment
+                issues when stock conflicts occur[cite: 1, 2].
               </li>
               <li>
-                <strong>Authentication &amp; Security:</strong> JWT access/refresh
-                tokens with rotation, Google Identity Services sign-in/sign-up, email
-                verification, password reset, brute-force lockout (5 attempts → 15
-                min), per-endpoint rate limiting, and Nginx security headers/CSP[cite: 1, 2].
+                <strong>Authentication &amp; Security:</strong> JWT
+                access/refresh tokens with rotation, Google Identity Services
+                sign-in/sign-up, email verification, password reset, brute-force
+                lockout (5 attempts → 15 min), per-endpoint rate limiting, and
+                Nginx security headers/CSP[cite: 1, 2].
               </li>
               <li>
-                <strong>Admin Panel:</strong> Role-protected dashboard with order
-                management (status, tracking, refunds), product and category CRUD,
-                and payment-issue review[cite: 1, 2].
+                <strong>Admin Panel:</strong> Role-protected dashboard with
+                order management (status, tracking, refunds), product and
+                category CRUD, and payment-issue review[cite: 1, 2].
               </li>
               <li>
-                <strong>Demo &amp; Operations:</strong> Site-wide Stripe test-mode
-                banner, PostgreSQL backup/restore scripts, scripted admin creation,
-                and automated GitHub Actions deployment to the VPS[cite: 1].
+                <strong>Demo &amp; Operations:</strong> Site-wide Stripe
+                test-mode banner, PostgreSQL backup/restore scripts, scripted
+                admin creation, and automated GitHub Actions deployment to the
+                VPS[cite: 1].
               </li>
               <li>
                 <strong>Testing &amp; CI/CD:</strong> 38 xUnit unit tests,
@@ -1639,7 +1651,7 @@
           </div>
 
           <!-- Admin Panel Section & Photo -->
-          <div class="project-admin" style="margin-top: 1.25rem;">
+          <div class="project-admin" style="margin-top: 1.25rem">
             <h3>Admin Panel</h3>
             <img
               src="img/mercato-adminpage.png"
@@ -1656,7 +1668,8 @@
             />
             <p>
               Role-protected admin workspace (<code>/admin</code>, with
-              <code>/admin/login</code> and automatic redirect from <code>/login</code>
+              <code>/admin/login</code> and automatic redirect from
+              <code>/login</code>
               for admin accounts) for viewing dashboard stats, managing orders
               (status, tracking number, refunds), maintaining products and
               categories, and reviewing payment issues such as
